@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triggers Academy - salesCraft</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Metropolis:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary: #1A1914;
+            --secondary: #FFFCE6;
+            --accent: #FFEB69;
+            --cta: #D5C8FF;
+        }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+        
+        .metropolis {
+            font-family: 'Metropolis', sans-serif;
+        }
+        
+        .trigger-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .trigger-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: var(--accent);
+        }
+        
+        .tab-button {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+        
+        .tab-button.active {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+        
+        .tab-button:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, #2a2420 100%);
+        }
+        
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--cta) 100%);
+        }
+        
+        .step-number {
+            background: var(--accent);
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .cta-button {
+            background: var(--cta);
+            color: var(--primary);
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-weight: 600;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(213, 200, 255, 0.4);
+        }
+        
+        .logo-text {
+            font-family: 'Metropolis', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--accent);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .example-sector {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--cta) 100%);
+            color: var(--primary);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 8px 0;
+        }
+        
+        .tool-tag {
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .free-tool {
+            background: #10b981;
+            color: white;
+        }
+        
+        .paid-tool {
+            background: #f59e0b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="hero-gradient text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <div class="logo-text">salesCraft</div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#triggers" class="hover:text-yellow-300 transition-colors">Triggers</a>
+                    <a href="#methode" class="hover:text-yellow-300 transition-colors">Méthode</a>
+                    <a href="#templates" class="hover:text-yellow-300 transition-colors">Templates</a>
+                </nav>
+            </div>
+            
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="metropolis text-4xl md:text-6xl font-bold mb-4">
+                    Les 30 Triggers qui transforment ta prospection
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200">
+                    Arrête de prospecter à l'aveugle. Utilise les signaux qui marchent + la méthode pour créer les tiens.
+                </p>
+                <button class="cta-button text-lg font-semibold px-8 py-4 inline-flex items-center space-x-2">
+                    <span>Découvrir les triggers</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: Les 30 Triggers Universels -->
+    <section id="triggers" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="metropolis text-3xl md:text-4xl font-bold mb-4">Les 30 Triggers Universels</h2>
+                <p class="text-lg text-gray-600">Des signaux concrets pour déclencher tes actions de prospection</p>
+            </div>
+            
+            <!-- Tabs -->
+            <div class="flex justify-center mb-8">
+                <div class="flex space-x-2 bg-white p-2 rounded-lg shadow-lg">
+                    <button class="tab-button active px-6 py-3 font-semibold" data-tab="entreprise">
+                        Triggers Entreprise (18)
+                    </button>
+                    <button class="tab-button px-6 py-3 font-semibold" data-tab="personne">
+                        Triggers Personne (9)
+                    </button>
+                    <button class="tab-button px-6 py-3 font-semibold" data-tab="tech">
+                        Triggers Tech (3)
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Triggers Entreprise -->
+            <div id="entreprise-content" class="tab-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Trigger 1: Recrutement -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-users text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Recrutement actif</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">L'entreprise recrute dans le département que tu cibles</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag free-tool">Indeed</span>
+                                <span class="tool-tag paid-tool">Sales Navigator</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"Salut [Prénom], j'ai vu que vous recrutez un [poste]. C'est exactement le type de profil qui bénéficie de [solution]. Peut-être qu'on peut discuter de comment optimiser l'onboarding ?"</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Une ESN qui recrute des développeurs → pitch d'une solution de code review</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 2: Croissance -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-chart-line text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Croissance rapide</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">L'équipe s'agrandit rapidement dans ton secteur cible</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Apollo</span>
+                                <span class="tool-tag paid-tool">Clay</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], félicitations pour la croissance de l'équipe [département] ! Avec cette expansion, vous devez faire face à des défis de [problème]. On aide des boîtes similaires à..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> +50% d'effectifs marketing → pitch d'un outil de marketing automation</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 3: Levée de fonds -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-money-bill-wave text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Levée de fonds</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">L'entreprise vient de lever des fonds</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">Crunchbase</span>
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Dealroom</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"Salut [Prénom], bravo pour la levée ! Avec cette croissance, vous allez certainement avoir besoin de [solution] pour [objectif]. Je peux te montrer comment..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Startup qui lève 2M€ → pitch d'un CRM pour structurer les ventes</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 4: Nouveau produit -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-rocket text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Lancement produit</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">L'entreprise lance un nouveau produit/service</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">Google Alerts</span>
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Mention</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], j'ai vu le lancement de [produit], félicitations ! Pour maximiser l'adoption, vous pourriez être intéressé par [solution]..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> SaaS qui lance une nouvelle feature → pitch d'un outil d'onboarding</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 5: Nouveaux locaux -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-building text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Nouveaux locaux</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">L'entreprise ouvre de nouveaux bureaux</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag free-tool">Google News</span>
+                                <span class="tool-tag paid-tool">Societe.com</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"Salut [Prénom], j'ai vu que vous ouvrez de nouveaux bureaux à [ville]. C'est le moment idéal pour mettre en place [solution]..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Expansion géographique → pitch d'un système téléphonique cloud</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 6: Licenciements -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-chart-line-down text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Restructuration</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">L'entreprise fait face à des licenciements</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag free-tool">Press</span>
+                                <span class="tool-tag paid-tool">Layoffs.fyi</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], dans ce contexte de restructuration, il devient crucial d'optimiser [processus]. Notre solution aide à..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Réduction d'effectifs → pitch d'un outil d'automatisation</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 7: Acquisition -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-handshake text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Acquisition</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">L'entreprise acquiert ou est acquise</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">Crunchbase</span>
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Dealroom</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"Salut [Prénom], félicitations pour l'acquisition ! L'intégration des équipes va nécessiter [solution]. On peut t'aider à..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Fusion d'entreprises → pitch d'un outil de gestion des talents</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 8: Législation -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-gavel text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Changement législatif</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Nouvelle réglementation impactant le secteur</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">Legifrance</span>
+                                <span class="tool-tag free-tool">Google Alerts</span>
+                                <span class="tool-tag paid-tool">Veille juridique</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], avec la nouvelle réglementation [nom], vous devez certainement adapter [processus]. Notre solution assure la conformité..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> RGPD → pitch d'un outil de gestion des données</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 9: Récompenses -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-trophy text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Prix & récompenses</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">L'entreprise reçoit un prix ou une reconnaissance</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag free-tool">Google Alerts</span>
+                                <span class="tool-tag paid-tool">Mention</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], félicitations pour [prix] ! Cette croissance va nécessiter des outils plus performants. Peut-être qu'on peut échanger sur..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Prix "Startup de l'année" → pitch d'un outil de scaling</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 10: Contenu -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-pen-fancy text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Contenu pertinent</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">L'entreprise publie du contenu lié à ton domaine</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">Google Alerts</span>
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Mention</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], j'ai lu votre article sur [sujet]. Vous soulevez un point intéressant sur [point]. Chez nous, on aide les entreprises à..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Article sur l'IA → pitch d'un outil d'automatisation IA</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 11: Trafic web -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-chart-bar text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Évolution trafic web</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Le trafic du site augmente/diminue significativement</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag paid-tool">Semrush</span>
+                                <span class="tool-tag paid-tool">SimilarWeb</span>
+                                <span class="tool-tag paid-tool">Ahrefs</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], j'ai remarqué une belle progression de votre trafic web ! Pour capitaliser sur cette audience, vous pourriez être intéressé par..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> +200% de trafic → pitch d'un outil de conversion</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 12: Concurrents -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-binoculars text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Utilise un concurrent</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">L'entreprise utilise un concurrent direct</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">BuiltWith</span>
+                                <span class="tool-tag paid-tool">Wappalyzer</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], j'ai vu que vous utilisez [concurrent]. Beaucoup de nos clients sont passés de [concurrent] à nous pour [avantage]. Peut-être qu'on peut échanger..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Utilise HubSpot → pitch d'un CRM plus spécialisé</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 13: Outils -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-tools text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Outil complémentaire</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">L'entreprise utilise un outil compatible avec le tien</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag paid-tool">BuiltWith</span>
+                                <span class="tool-tag paid-tool">Wappalyzer</span>
+                                <span class="tool-tag paid-tool">Apollo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], j'ai vu que vous utilisez [outil]. Notre solution s'intègre parfaitement et permet de [bénéfice]. Ça pourrait vous intéresser..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Utilise Shopify → pitch d'un outil de marketing automation</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 14: Événements -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-calendar-alt text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Participation événement</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">L'entreprise participe à un salon/conférence</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag free-tool">Eventbrite</span>
+                                <span class="tool-tag paid-tool">Mention</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], j'ai vu que vous étiez à [événement]. Vous devez être focus sur [thème]. C'est exactement ce sur quoi on aide nos clients..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Salon e-commerce → pitch d'un outil de gestion inventory</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 15: Avis clients -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-star text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Avis clients</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Évolution des avis sur leur solution actuelle</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">G2</span>
+                                <span class="tool-tag free-tool">Capterra</span>
+                                <span class="tool-tag paid-tool">Mention</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], j'ai vu des retours sur [concurrent] qui mentionnent [problème]. C'est exactement ce qu'on résout avec [solution]..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Avis négatifs sur la complexité → pitch d'une solution plus simple</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 16: Mission -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-compass text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Mission alignée</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">La mission de l'entreprise correspond à ton ICP</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">Site web</span>
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Apollo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], votre mission '[mission]' résonne avec nos valeurs. On aide des entreprises comme la vôtre à [objectif]..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Mission RSE → pitch d'un outil de mesure d'impact</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 17: Ressemblance client -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-user-check text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Ressemble à un client</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">L'entreprise ressemble à un client existant</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Apollo</span>
+                                <span class="tool-tag paid-tool">Clay</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], votre profil ressemble beaucoup à [client similar]. On les aide à [résultat]. Peut-être qu'on peut faire pareil pour vous..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Même secteur/taille qu'un client satisfait → case study</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 18: Intégrations -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-plug text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Stack compatible</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Leur stack tech est compatible avec ton produit</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag paid-tool">BuiltWith</span>
+                                <span class="tool-tag paid-tool">Wappalyzer</span>
+                                <span class="tool-tag paid-tool">Apollo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], j'ai vu que vous utilisez [stack]. Notre solution s'intègre nativement et permet de [bénéfice]. Ça pourrait vous faire gagner..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Utilise Stripe → pitch d'un outil de récurrence</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Triggers Personne -->
+            <div id="personne-content" class="tab-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Trigger 19: Promotion -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-arrow-up text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Promotion récente</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">La personne vient d'être promue</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Sales Navigator</span>
+                                <span class="tool-tag paid-tool">Apollo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"Salut [Prénom], félicitations pour ta promotion ! Dans ton nouveau rôle, tu vas probablement avoir besoin de [solution]. On peut t'aider à..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Promotion Chief Marketing Officer → pitch d'un outil de marketing analytics</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 20: Nouveau poste -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-briefcase text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Nouveau poste</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">La personne a changé d'entreprise</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Sales Navigator</span>
+                                <span class="tool-tag paid-tool">Apollo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"Salut [Prénom], félicitations pour ton nouveau poste chez [entreprise] ! Tu vas sûrement vouloir mettre en place [solution]. On peut t'aider à..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Nouveau Head of Sales → pitch d'un CRM ou outil de sales enablement</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 21: Podcast/Webinar -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-microphone text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Podcast/Webinar</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">La personne a participé à un podcast/webinar</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">Google Alerts</span>
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Mention</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"Salut [Prénom], j'ai écouté ton intervention sur [podcast]. Tu as soulevé un point intéressant sur [sujet]. On aide justement les entreprises à..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Podcast sur l'IA → pitch d'un outil d'automatisation IA</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 22: Suit la boîte -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-heart text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Suit ta boîte</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">La personne suit ta page LinkedIn</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Sales Navigator</span>
+                                <span class="tool-tag paid-tool">Shield</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"Salut [Prénom], j'ai vu que tu suivais notre page LinkedIn. Tu sembles intéressé par [domaine]. On aide des entreprises comme [entreprise] à..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Suit la page → approche soft pour échanger sur les challenges</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 23: Vu le profil -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-eye text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">A vu ton profil</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">La personne a consulté ton profil LinkedIn</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Sales Navigator</span>
+                                <span class="tool-tag paid-tool">Shield</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"Salut [Prénom], j'ai vu que tu avais consulté mon profil. Tu t'intéresses à [domaine] ? On pourrait échanger sur [sujet]..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Vue du profil → ouverture naturelle pour la conversation</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 24: Engage le contenu -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-thumbs-up text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Engage ton contenu</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">La personne like/commente tes posts</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Shield</span>
+                                <span class="tool-tag paid-tool">Dripify</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"Salut [Prénom], merci pour ton engagement sur mes posts ! J'ai vu que tu travailles sur [domaine]. On pourrait échanger sur [sujet]..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Like sur un post sales → approche pour échanger sur la prospection</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 25: Ex-client -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-history text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Ex-client</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">La personne a travaillé chez un client</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Sales Navigator</span>
+                                <span class="tool-tag paid-tool">Apollo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"Salut [Prénom], j'ai vu que tu as travaillé chez [ex-client]. Tu connais donc [solution] ! Dans ton nouveau rôle, ça pourrait t'intéresser de..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Ex-client satisfait → référence pour nouveau poste</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 26: Connexions communes -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-users text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Connexions communes</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Vous avez des connexions en commun</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Sales Navigator</span>
+                                <span class="tool-tag paid-tool">Apollo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"Salut [Prénom], j'ai vu qu'on avait [connexion] en commun. Il/elle m'a parlé de [sujet]. Ça pourrait t'intéresser de discuter de..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Connexion commune → intro chaleureuse</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 27: Ex-concurrent -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-exchange-alt text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Ex-concurrent</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">La personne a travaillé chez un concurrent</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag paid-tool">Sales Navigator</span>
+                                <span class="tool-tag paid-tool">Apollo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"Salut [Prénom], j'ai vu ton parcours chez [concurrent]. Tu connais donc bien [domaine]. Dans ton nouveau rôle, tu pourrais être intéressé par..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Ex-concurrent → expertise du marché</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Triggers Tech -->
+            <div id="tech-content" class="tab-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Trigger 28: Adoption d'outils -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-download text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Adoption nouvel outil</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">L'entreprise adopte un nouvel outil tech</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag paid-tool">BuiltWith</span>
+                                <span class="tool-tag paid-tool">Wappalyzer</span>
+                                <span class="tool-tag paid-tool">6sense</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], j'ai vu que vous avez adopté [outil]. C'est un excellent choix ! Notre solution se connecte parfaitement et permet de..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Adoption Slack → pitch d'un bot d'automatisation</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 29: Événements tech -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-code text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Événements tech</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Participation à des événements tech/digital</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag free-tool">LinkedIn</span>
+                                <span class="tool-tag free-tool">Eventbrite</span>
+                                <span class="tool-tag paid-tool">Mention</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], j'ai vu que vous étiez à [événement tech]. Vous devez réfléchir à [enjeu]. On aide justement les entreprises à..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Conférence DevOps → pitch d'un outil de monitoring</p>
+                        </div>
+                    </div>
+
+                    <!-- Trigger 30: Signaux automatisés -->
+                    <div class="trigger-card p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-robot text-2xl mr-3" style="color: var(--accent)"></i>
+                            <h3 class="metropolis text-xl font-bold">Signaux automatisés</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Détection automatique de signaux complexes</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Comment le détecter :</h4>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="tool-tag paid-tool">Clay</span>
+                                <span class="tool-tag paid-tool">Phantombuster</span>
+                                <span class="tool-tag paid-tool">Zapier</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Template message :</h4>
+                            <p class="text-sm bg-gray-50 p-3 rounded">"[Prénom], j'ai remarqué [signal personnalisé]. C'est souvent le moment où les entreprises comme la vôtre ont besoin de..."</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-3 rounded">
+                            <p class="text-sm"><strong>Exemple :</strong> Combinaison de signaux → approche ultra-personnalisée</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Section 2: Créer VOS Triggers Sectoriels -->
+    <section id="methode" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="metropolis text-3xl md:text-4xl font-bold mb-4">Créer VOS Triggers Sectoriels</h2>
+                <p class="text-lg text-gray-600">Le framework pour identifier les signaux spécifiques à votre secteur</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Framework en 4 étapes -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    
+                    <!-- Étape 1 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h3 class="metropolis text-xl font-bold mb-3">Identifier vos "moments critiques"</h3>
+                            <p class="text-gray-600 mb-4">Quand votre prospect a-t-il VRAIMENT besoin de votre solution ? Listez tous les événements qui créent une urgence ou un besoin immédiat.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <p class="font-semibold text-sm">Exemple :</p>
+                                <p class="text-sm">• Panne de matériel existant</p>
+                                <p class="text-sm">• Nouvelle réglementation</p>
+                                <p class="text-sm">• Expansion géographique</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Étape 2 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h3 class="metropolis text-xl font-bold mb-3">Cartographier les signaux précurseurs</h3>
+                            <p class="text-gray-600 mb-4">Quels signaux annoncent ces moments critiques ? Pensez aux indices qui apparaissent 3-6 mois avant le besoin.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <p class="font-semibold text-sm">Exemple :</p>
+                                <p class="text-sm">• Recherche de locaux</p>
+                                <p class="text-sm">• Recrutement technique</p>
+                                <p class="text-sm">• Demandes de devis concurrents</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Étape 3 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h3 class="metropolis text-xl font-bold mb-3">Créer votre système de veille</h3>
+                            <p class="text-gray-600 mb-4">Comment automatiser la détection de ces signaux ? Mettez en place des alertes et utilisez les bons outils.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <p class="font-semibold text-sm">Outils recommandés :</p>
+                                <p class="text-sm">• Google Alerts personnalisées</p>
+                                <p class="text-sm">• Mentions.net</p>
+                                <p class="text-sm">• APIs sectorielles</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Étape 4 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="step-number">4</div>
+                        <div>
+                            <h3 class="metropolis text-xl font-bold mb-3">Transformer le signal en message</h3>
+                            <p class="text-gray-600 mb-4">Comment passer du signal à un message qui vend ? Créez des templates personnalisés pour chaque trigger.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <p class="font-semibold text-sm">Structure type :</p>
+                                <p class="text-sm">• Référence au signal</p>
+                                <p class="text-sm">• Lien avec leur besoin</p>
+                                <p class="text-sm">• Proposition de valeur</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- Exemples par secteur -->
+                <div class="mb-12">
+                    <h3 class="metropolis text-2xl font-bold mb-6 text-center">Exemples par secteur</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <!-- Équipements industriels -->
+                        <div class="example-sector">
+                            <h4 class="font-bold mb-3">🏭 Équipements industriels</h4>
+                            <p class="mb-2"><strong>Trigger :</strong> "Nouveau laboratoire créé"</p>
+                            <p class="mb-2"><strong>Détection :</strong> Permis de construire, annonces immobilières pro</p>
+                            <p class="text-sm"><strong>Message :</strong> "Salut [Prénom], j'ai vu que vous ouvrez un nouveau labo à [ville]. Pour l'équipement, on pourrait échanger sur vos besoins..."</p>
+                        </div>
+
+                        <!-- SaaS -->
+                        <div class="example-sector">
+                            <h4 class="font-bold mb-3">💻 SaaS</h4>
+                            <p class="mb-2"><strong>Trigger :</strong> "Migration vers le cloud"</p>
+                            <p class="mb-2"><strong>Détection :</strong> Offres d'emploi DevOps, posts LinkedIn sur la transformation</p>
+                            <p class="text-sm"><strong>Message :</strong> "Salut [Prénom], j'ai vu que vous migrez vers le cloud. C'est le moment idéal pour repenser votre stack..."</p>
+                        </div>
+
+                        <!-- Services -->
+                        <div class="example-sector">
+                            <h4 class="font-bold mb-3">🎯 Services</h4>
+                            <p class="mb-2"><strong>Trigger :</strong> "Changement de direction"</p>
+                            <p class="mb-2"><strong>Détection :</strong> Annonces LinkedIn, communiqués de presse</p>
+                            <p class="text-sm"><strong>Message :</strong> "Salut [Prénom], avec l'arrivée du nouveau directeur, vous devez repenser votre stratégie..."</p>
+                        </div>
+
+                        <!-- E-commerce -->
+                        <div class="example-sector">
+                            <h4 class="font-bold mb-3">🛒 E-commerce</h4>
+                            <p class="mb-2"><strong>Trigger :</strong> "Pic de trafic saisonnier"</p>
+                            <p class="mb-2"><strong>Détection :</strong> SimilarWeb, mentions de surcharge</p>
+                            <p class="text-sm"><strong>Message :</strong> "Salut [Prénom], avec le pic de trafic, vos serveurs doivent être sous pression..."</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Section 3: Templates & Outils -->
+    <section id="templates" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="metropolis text-3xl md:text-4xl font-bold mb-4">Templates & Outils</h2>
+                <p class="text-lg text-gray-600">Tout ce qu'il faut pour implémenter votre stratégie trigger-driven</p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                
+                <!-- Messages prêts à l'emploi -->
+                <div class="mb-12">
+                    <h3 class="metropolis text-2xl font-bold mb-6">Messages prêts à l'emploi</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <!-- Template 1 -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold mb-3 text-lg">🎯 Template "Trigger Direct"</h4>
+                            <div class="bg-gray-50 p-4 rounded mb-4">
+                                <p class="text-sm font-mono">
+                                    Salut [Prénom],<br><br>
+                                    J'ai vu que [TRIGGER SPÉCIFIQUE].<br><br>
+                                    C'est souvent le moment où les entreprises comme [ENTREPRISE] ont besoin de [SOLUTION].<br><br>
+                                    On aide des boîtes similaires à [RÉSULTAT CONCRET].<br><br>
+                                    Ça t'intéresse qu'on échange 15 min sur [SUJET] ?<br><br>
+                                    [Signature]
+                                </p>
+                            </div>
+                            <p class="text-sm text-gray-600">✅ Efficace pour les triggers évidents (levée de fonds, recrutement, etc.)</p>
+                        </div>
+
+                        <!-- Template 2 -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold mb-3 text-lg">🤝 Template "Soft Approach"</h4>
+                            <div class="bg-gray-50 p-4 rounded mb-4">
+                                <p class="text-sm font-mono">
+                                    Salut [Prénom],<br><br>
+                                    [TRIGGER + FÉLICITATIONS].<br><br>
+                                    Dans ce contexte, tu dois faire face à [CHALLENGE PROBABLE].<br><br>
+                                    J'ai quelques idées qui pourraient t'aider. Pas de pitch, juste un échange entre pros.<br><br>
+                                    Tu as 15 min cette semaine ?<br><br>
+                                    [Signature]
+                                </p>
+                            </div>
+                            <p class="text-sm text-gray-600">✅ Parfait pour les triggers sensibles (licenciements, difficultés, etc.)</p>
+                        </div>
+
+                        <!-- Template 3 -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold mb-3 text-lg">📊 Template "Social Proof"</h4>
+                            <div class="bg-gray-50 p-4 rounded mb-4">
+                                <p class="text-sm font-mono">
+                                    Salut [Prénom],<br><br>
+                                    J'ai vu que [TRIGGER]. Ça me rappelle [CLIENT SIMILAIRE] qui était dans la même situation.<br><br>
+                                    On les a aidés à [RÉSULTAT CONCRET] en [TIMEFRAME].<br><br>
+                                    Ça pourrait t'intéresser de voir comment on s'y est pris ?<br><br>
+                                    [Signature]
+                                </p>
+                            </div>
+                            <p class="text-sm text-gray-600">✅ Idéal quand tu as un cas client similaire</p>
+                        </div>
+
+                        <!-- Template 4 -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold mb-3 text-lg">🔥 Template "Urgence"</h4>
+                            <div class="bg-gray-50 p-4 rounded mb-4">
+                                <p class="text-sm font-mono">
+                                    Salut [Prénom],<br><br>
+                                    Avec [TRIGGER], vous avez probablement peu de temps pour [OBJECTIF].<br><br>
+                                    On a déjà géré ce type de situation en mode express pour [EXEMPLE].<br><br>
+                                    Si ça peut t'aider, je peux te montrer comment on procède.<br><br>
+                                    [Signature]
+                                </p>
+                            </div>
+                            <p class="text-sm text-gray-600">✅ Pour les triggers avec contrainte temporelle</p>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- Checklist d'implémentation -->
+                <div class="mb-12">
+                    <h3 class="metropolis text-2xl font-bold mb-6">Checklist d'implémentation</h3>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            
+                            <!-- Semaine 1 -->
+                            <div>
+                                <h4 class="font-bold mb-4 text-lg">📋 Semaine 1 : Fondations</h4>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Identifier mes 5 triggers prioritaires</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Créer mes Google Alerts</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Configurer LinkedIn Sales Navigator</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Lister mes outils de détection</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Créer mes templates de messages</li>
+                                </ul>
+                            </div>
+
+                            <!-- Semaine 2 -->
+                            <div>
+                                <h4 class="font-bold mb-4 text-lg">🚀 Semaine 2 : Déploiement</h4>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Tester mes premiers triggers</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Envoyer 10 messages trigger-driven</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Analyser les taux de réponse</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Ajuster mes templates</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Documenter ce qui fonctionne</li>
+                                </ul>
+                            </div>
+
+                            <!-- Semaine 3 -->
+                            <div>
+                                <h4 class="font-bold mb-4 text-lg">⚡ Semaine 3 : Optimisation</h4>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Automatiser la détection</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Créer mes triggers sectoriels</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Intégrer à mon CRM</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Former mon équipe</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Mesurer les résultats</li>
+                                </ul>
+                            </div>
+
+                            <!-- Semaine 4 -->
+                            <div>
+                                <h4 class="font-bold mb-4 text-lg">📈 Semaine 4 : Scaling</h4>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Dupliquer ce qui marche</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Créer de nouveaux triggers</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Optimiser l'automatisation</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Analyser les performances</li>
+                                    <li class="flex items-center"><input type="checkbox" class="mr-2"> Planifier le mois suivant</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Outils recommandés -->
+                <div class="mb-12">
+                    <h3 class="metropolis text-2xl font-bold mb-6">Outils recommandés</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        
+                        <!-- Gratuits -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold mb-4 text-lg flex items-center">
+                                <i class="fas fa-gift mr-2 text-green-600"></i>
+                                Gratuits
+                            </h4>
+                            <ul class="space-y-2 text-sm">
+                                <li>• <strong>LinkedIn</strong> - Signaux de base</li>
+                                <li>• <strong>Google Alerts</strong> - Veille automatique</li>
+                                <li>• <strong>Indeed</strong> - Offres d'emploi</li>
+                                <li>• <strong>Crunchbase</strong> - Levées de fonds</li>
+                                <li>• <strong>G2 Crowd</strong> - Avis clients</li>
+                                <li>• <strong>Glassdoor</strong> - Recrutement</li>
+                            </ul>
+                        </div>
+
+                        <!-- Payants essentiels -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold mb-4 text-lg flex items-center">
+                                <i class="fas fa-star mr-2 text-yellow-600"></i>
+                                Payants essentiels
+                            </h4>
+                            <ul class="space-y-2 text-sm">
+                                <li>• <strong>Sales Navigator</strong> - Prospection LinkedIn</li>
+                                <li>• <strong>Apollo</strong> - Base de données B2B</li>
+                                <li>• <strong>Clay</strong> - Automatisation triggers</li>
+                                <li>• <strong>Mention</strong> - Veille web</li>
+                                <li>• <strong>BuiltWith</strong> - Stack technologique</li>
+                                <li>• <strong>Semrush</strong> - Analyse web</li>
+                            </ul>
+                        </div>
+
+                        <!-- Avancés -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="font-bold mb-4 text-lg flex items-center">
+                                <i class="fas fa-rocket mr-2 text-purple-600"></i>
+                                Avancés
+                            </h4>
+                            <ul class="space-y-2 text-sm">
+                                <li>• <strong>6sense</strong> - Intent data</li>
+                                <li>• <strong>Phantombuster</strong> - Automatisation</li>
+                                <li>• <strong>Zapier</strong> - Intégrations</li>
+                                <li>• <strong>Dealroom</strong> - Startup tracking</li>
+                                <li>• <strong>SimilarWeb</strong> - Analyse concurrentielle</li>
+                                <li>• <strong>Clearbit</strong> - Enrichissement data</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="hero-gradient text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="metropolis text-3xl md:text-4xl font-bold mb-4">
+                Prêt à transformer ta prospection ?
+            </h2>
+            <p class="text-xl mb-8 text-gray-200">
+                On identifie ensemble VOS triggers les plus puissants
+            </p>
+            <button class="cta-button text-xl font-semibold px-12 py-4 inline-flex items-center space-x-3">
+                <span>Audit stratégique gratuit</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            <p class="text-sm text-gray-300 mt-4">
+                1 heure pour révolutionner votre approche de prospection
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <div>
+                    <div class="logo-text mb-4">salesCraft</div>
+                    <p class="text-gray-400 text-sm mb-4">
+                        On ne cash te rien.<br>
+                        Vends moi ce stylo !
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Ressources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Podcast</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Newsletter</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Formations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Coaching</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Outils</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Templates</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Scripts</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Checklist</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Calculateurs</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white">LinkedIn</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Email</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Calendly</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 salesCraft. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion des onglets
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.dataset.tab;
+                    
+                    // Retirer la classe active de tous les boutons
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Ajouter la classe active au bouton cliqué
+                    this.classList.add('active');
+                    
+                    // Cacher tous les contenus
+                    tabContents.forEach(content => content.classList.add('hidden'));
+                    
+                    // Afficher le contenu correspondant
+                    const targetContent = document.getElementById(targetTab + '-content');
+                    if (targetContent) {
+                        targetContent.classList.remove('hidden');
+                        targetContent.classList.add('fade-in');
+                    }
+                });
+            });
+            
+            // Smooth scrolling pour les liens de navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Animation des cartes au scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observer toutes les cartes
+            document.querySelectorAll('.trigger-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
