@@ -1,0 +1,1091 @@
+{
+  "company": [
+    {
+      "signal": "Stale opportunity",
+      "why": "A lot of initial convos go well but die on the vine due to budget, timing, feature gap, etc. After some time, these are some of the lowest-hanging fruit to pick up. Even better if you have a new feature to revitalize interest.",
+      "strength": 3,
+      "icon": "fa-bullseye",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], I noticed we spoke [X months] ago about [topic]. Since then, we've added [new feature] that addresses [pain point]. Worth a quick chat?",
+      "example": "6-month old opportunity → New feature launched → Re-engage with value add"
+    },
+    {
+      "signal": "Surge in email opens (internal)",
+      "why": "Hint: The email opens probably aren't coming from just one person. Rather, it's a sign that your email is being passed around to other stakeholders.",
+      "strength": 3,
+      "icon": "fa-envelope-open",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], I see there's growing interest in [solution]. Who else should I loop in to discuss how this helps [objective]?",
+      "example": "Email opened 8 times → Multiple stakeholders → Expand conversation"
+    },
+    {
+      "signal": "Legislation change",
+      "why": "Sometimes the government steps in and passes legislation that impacts markets. When your product is an easy fix for that change, it's a lot easier to convert a customer or book an intro.",
+      "strength": 3,
+      "icon": "fa-balance-scale",
+      "tools": [
+        "lemlist Intent",
+        "Google Alerts"
+      ],
+      "template": "Hi [FirstName], with [new regulation] taking effect, companies in [industry] need to adapt. Here's how [solution] ensures compliance...",
+      "example": "GDPR launch → Privacy compliance tools → Massive demand spike"
+    },
+    {
+      "signal": "Platform policy change",
+      "why": "Companies and services have been wiped out by policy changes to distribution platforms (updates to Gmail sender guidelines come to mind). When this happens, it causes fear, uncertainty, and doubt—FUD that your product can potentially curb.",
+      "strength": 3,
+      "icon": "fa-exclamation-triangle",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], [Platform] just changed [policy]. Companies using [old method] are at risk. Here's how to adapt...",
+      "example": "Gmail sender requirements → Email deliverability tools → Urgent need"
+    },
+    {
+      "signal": "Competitor close or acquisition",
+      "why": "When competitors sunset their service or get acquired, their customers often reenter the market to refill the gap.",
+      "strength": 3,
+      "icon": "fa-building",
+      "tools": [
+        "lemlist Intent",
+        "Crunchbase"
+      ],
+      "template": "Hi [FirstName], I know you were using [competitor]. With their recent [acquisition/closure], we're helping former users transition to [solution].",
+      "example": "Competitor acquired → Users need alternative → Perfect timing for outreach"
+    },
+    {
+      "signal": "Surge in layoffs",
+      "why": "Reduction in force is a signal of need for efficiency or strategy not working as intended. While often seen as a counter-signal, it can be a positive sign for a need to consolidate technology or bring on a new tool to replace the function of an employee.",
+      "strength": 2,
+      "icon": "fa-user-minus",
+      "tools": [
+        "lemlist Intent",
+        "LinkedIn"
+      ],
+      "template": "[FirstName], restructuring often means doing more with less. [Solution] helps automate [function] without adding headcount.",
+      "example": "Marketing layoffs → Marketing automation tools → Efficiency play"
+    },
+    {
+      "signal": "Negative product review",
+      "why": "Sites like G2 and Trustpilot offer a wealth of reviews from product users. Even if generally positive, reviews often uncover frustrations or limitations of the product. If your product addresses those pain points, it's a good opportunity to reach out or chime in.",
+      "strength": 2,
+      "icon": "fa-star-half-alt",
+      "tools": [
+        "lemlist Intent",
+        "G2"
+      ],
+      "template": "Hi [FirstName], I noticed concerns about [competitor]'s [limitation]. We built [solution] specifically to address this. Here's how...",
+      "example": "Negative review of competitor → Your product solves that issue → Opportunistic outreach"
+    },
+    {
+      "signal": "Form or chat flow abandonment",
+      "why": "In addition to abandoning a sign-up flow, form fills and live chats are occasionally abandoned (especially if there's a lag in live chat response time). Dig into it.",
+      "strength": 2,
+      "icon": "fa-comments",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], I noticed you started exploring [solution] but didn't finish. What questions can I answer to help you evaluate?",
+      "example": "Demo form 80% complete → Follow-up within 1 hour → Higher completion rate"
+    },
+    {
+      "signal": "Support ticket creation",
+      "why": "Seems obvious, but oftentimes support teams and go-to-market teams don't talk to one another. When a support ticket is created (especially if it's from a high-fit account), it's usually worth a look from the GTM team.",
+      "strength": 2,
+      "icon": "fa-ticket-alt",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "Hi [FirstName], I saw you reached out about [issue]. This is exactly what [solution] was designed to solve. Quick call?",
+      "example": "Support ticket about integration → Your product has that integration → Sales opportunity"
+    },
+    {
+      "signal": "Negative media coverage",
+      "why": "In the unfortunate scenario that a target account runs into PR trouble, it can be a catalyst for making a change—a change that may require new solutions to address a problem.",
+      "strength": 2,
+      "icon": "fa-newspaper",
+      "tools": [
+        "lemlist Intent",
+        "Google Alerts"
+      ],
+      "template": "[FirstName], challenging times often require new approaches. [Solution] helps companies in similar situations by [benefit].",
+      "example": "Data breach coverage → Security solutions → Urgent need to rebuild trust"
+    },
+    {
+      "signal": "Surge in hiring",
+      "why": "Hiring is a sign that there's a need to solve a problem. If your product can help, it's a strong signal to connect and show how.",
+      "strength": 1,
+      "icon": "fa-users",
+      "tools": [
+        "lemlist Intent",
+        "LinkedIn"
+      ],
+      "template": "[FirstName], I saw you're hiring [X] [positions]. This typically signals [challenge]. Here's how [solution] helps scale...",
+      "example": "Hiring 10 SDRs → Sales engagement platform → Scaling infrastructure need"
+    },
+    {
+      "signal": "Content consumption",
+      "why": "Tried and true way of surfacing engaged leads—those who click the emails, sign up for the webinars, read the blog posts, watch the videos, etc.",
+      "strength": 1,
+      "icon": "fa-newspaper",
+      "tools": [
+        "lemlist Intent",
+        "Google Analytics"
+      ],
+      "template": "Hi [FirstName], I noticed you've been reading about [topic]. Thought you'd find [resource] helpful as you evaluate [solution].",
+      "example": "Downloaded 3 whitepapers → High interest → Nurture with personal outreach"
+    },
+    {
+      "signal": "Capital raised/new funding secured",
+      "why": "Caution: This one is overused. However, it does mean that scale will follow. That scale could be a strong signal to purchase new software.",
+      "strength": 1,
+      "icon": "fa-money-bill-wave",
+      "tools": [
+        "lemlist Intent",
+        "Crunchbase"
+      ],
+      "template": "Hi [FirstName], congrats on the [round]! As you scale [function], [solution] helps companies at your stage by [benefit].",
+      "example": "Series B $20M → Scaling sales team → CRM/sales tools opportunity"
+    },
+    {
+      "signal": "Earnings call/10-K release",
+      "why": "While a pretty loose signal, these financial reports can provide insight into a widespread initiative within a target account. It's decent leverage to book a meeting.",
+      "strength": 1,
+      "icon": "fa-chart-bar",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], I noticed [initiative] mentioned in your recent earnings call. [Solution] helps companies execute on this by...",
+      "example": "Earnings call mentions AI investment → AI tools → Relevant timing"
+    },
+    {
+      "signal": "Webinar participation",
+      "why": "Indicates active interest in a product offering and the desire to deepen understanding. Often a sign of a prospect evaluating how the product fits their needs.",
+      "strength": 1,
+      "icon": "fa-video",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "Hi [FirstName], thanks for joining our webinar on [topic]. What questions can I answer as you evaluate [solution]?",
+      "example": "Attended product webinar → Asked questions → High intent for demo"
+    },
+    {
+      "signal": "New leadership recently hired (CEO, C-level, board)",
+      "why": "Bringing on a new CEO, C-level executive, or board member is a sign that change is happening in the form of new initiatives, new hires, strategy adjustments—all possible triggers where a new technology can help fill a gap.",
+      "strength": 1,
+      "icon": "fa-user-tie",
+      "tools": [
+        "lemlist Intent",
+        "LinkedIn"
+      ],
+      "template": "Hi [FirstName], congrats on the new [C-level] hire! New leadership often means new initiatives. Here's how [solution] supports...",
+      "example": "New CTO hired → Infrastructure/dev tools → 100-day plan opportunity"
+    },
+    {
+      "signal": "Merger or acquisition",
+      "why": "Rare these days, but integrating a new product, team, line of business, etc. is not an easy task. Still, it's one that your product can potentially help with.",
+      "strength": 1,
+      "icon": "fa-handshake",
+      "tools": [
+        "lemlist Intent",
+        "Crunchbase"
+      ],
+      "template": "[FirstName], integrating [acquired company] will require [challenge]. [Solution] helps M&A teams by [benefit].",
+      "example": "Acquired competitor → Integration tools → System consolidation need"
+    },
+    {
+      "signal": "Job opening(s)",
+      "why": "Hiring people is a sign that there's a gap that needs to be filled. It's possible that gap can be addressed by your product or that the person to address the gap would benefit from your product.",
+      "strength": 1,
+      "icon": "fa-briefcase",
+      "tools": [
+        "lemlist Intent",
+        "LinkedIn"
+      ],
+      "template": "[FirstName], I saw you're hiring a [position]. This role typically needs [tool/solution]. Happy to show how [solution] helps...",
+      "example": "Hiring Data Engineer → Data infrastructure tools → Technical buyer identified"
+    },
+    {
+      "signal": "Award or recognition received",
+      "why": "When a target account is recognized (think Cloud 100), or someone within that account is (think 30 under 30), it's an opportunity to send a congrats. Just try to make it relevant.",
+      "strength": 1,
+      "icon": "fa-award",
+      "tools": [
+        "lemlist Intent",
+        "Google Alerts"
+      ],
+      "template": "Congrats on [award], [FirstName]! Companies at your level often need [solution] for [challenge]. Worth discussing?",
+      "example": "Forbes Cloud 100 → Enterprise-grade solutions → Scale conversation"
+    },
+    {
+      "signal": "Customer story published (internal)",
+      "why": "When a customer story is made public (especially when that story has hard numbers), it's a good time to share it with prospects in a related space. Even better if they're competitors to the customer featured in the story.",
+      "strength": 1,
+      "icon": "fa-file-alt",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "Hi [FirstName], we just published a case study with [similar company] who achieved [results]. Thought you'd find it relevant given [context].",
+      "example": "Case study with competitor → Share results → FOMO trigger"
+    },
+    {
+      "signal": "Region expansion",
+      "why": "Moving into a new market could mean localized copy, policy restrictions (think GDPR), real estate requirements, etc. These are all potential buying triggers.",
+      "strength": 1,
+      "icon": "fa-globe",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], expanding to [region] brings [challenges]. Here's how [solution] helps companies scale internationally...",
+      "example": "Expanding to EU → GDPR compliance tools → Regulatory requirement"
+    },
+    {
+      "signal": "Offer expiration (internal)",
+      "why": "When there's a planned price increase or a holiday offer, the deadline offers a reason for a prospect to take action.",
+      "strength": 1,
+      "icon": "fa-clock",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "[FirstName], our [offer] expires [date]. Lock in [benefit] before [consequence]. Let's connect?",
+      "example": "Black Friday offer → 48-hour urgency → Limited-time conversion"
+    },
+    {
+      "signal": "Prospect or customer email bounce (internal)",
+      "why": "When an email sent to a high-fit user bounces, it's worth a look to see what happened. There may have been a change of employment, giving you a reason to connect with a different point of contact.",
+      "strength": 1,
+      "icon": "fa-exclamation-circle",
+      "tools": [
+        "lemlist",
+        "LinkedIn Sales Navigator"
+      ],
+      "template": "Hi [NewContact], I was working with [OldContact] but their email bounced. Are you the right person to discuss [solution]?",
+      "example": "Champion email bounces → Find replacement on LinkedIn → New opportunity"
+    },
+    {
+      "signal": "Professional milestone",
+      "why": "Recognition in the form of awards, news coverage, tenure, etc. are milestones that can be acknowledged to cater to a contact's ego. Can't hurt, right?",
+      "strength": 1,
+      "icon": "fa-trophy",
+      "tools": [
+        "lemlist Intent",
+        "LinkedIn"
+      ],
+      "template": "Congrats on [milestone], [FirstName]! With [achievement], you're probably looking at [next challenge]. Here's how [solution]...",
+      "example": "5-year work anniversary → Congrats + relevant offer → Relationship building"
+    },
+    {
+      "signal": "Positive media coverage",
+      "why": "A soft signal, but a signal nonetheless. When a prospect or customer is covered by a media outlet (e.g., TechCrunch, Bloomberg, etc.), it provides intel on company direction and can offer up a reason to reach out.",
+      "strength": 1,
+      "icon": "fa-newspaper",
+      "tools": [
+        "lemlist Intent",
+        "Google Alerts"
+      ],
+      "template": "Hi [FirstName], congrats on the [publication] feature! With [growth mentioned], [solution] could help by [benefit].",
+      "example": "TechCrunch feature → Positive momentum → Ride the wave"
+    },
+    {
+      "signal": "New customer story published",
+      "why": "Social proof and envy are strong motivators. When your team publishes a new case study, story, quote, etc., it's an opportunity to reach out to similar accounts and the direct competition.",
+      "strength": 1,
+      "icon": "fa-book",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], we just helped [competitor/similar company] achieve [results]. Given your similar [context], thought you'd want to see how.",
+      "example": "Competitor case study → Share with their competition → Competitive trigger"
+    },
+    {
+      "signal": "Contract renewal approaching",
+      "why": "When contracts are up for renewal (especially with competitors), it's the perfect time to present an alternative or upsell.",
+      "strength": 2,
+      "icon": "fa-file-contract",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "[FirstName], with your [competitor] contract renewing soon, now's the time to evaluate alternatives. Here's what makes [solution] different...",
+      "example": "Salesforce renewal in 60 days → Alternative CRM pitch → Decision window"
+    },
+    {
+      "signal": "Executive mentions problem in interview",
+      "why": "When executives publicly discuss challenges, they're essentially broadcasting buying intent for solutions to those problems.",
+      "strength": 2,
+      "icon": "fa-microphone",
+      "tools": [
+        "lemlist Intent",
+        "Google Alerts"
+      ],
+      "template": "Hi [FirstName], I heard [Executive] mention [challenge] in their [podcast/interview]. [Solution] specifically addresses this by...",
+      "example": "CEO talks about scaling issues on podcast → Infrastructure tools → Public pain point"
+    },
+    {
+      "signal": "Quarterly business review scheduled",
+      "why": "QBRs are decision-making moments. Showing up with relevant data right before a QBR can influence priorities and budgets.",
+      "strength": 2,
+      "icon": "fa-calendar-check",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "[FirstName], I know you have QBR coming up. Here's data showing how [solution] impacts [KPI] that might be useful...",
+      "example": "Q4 QBR scheduled → ROI data → Budget allocation timing"
+    },
+    {
+      "signal": "Office relocation or expansion",
+      "why": "Physical expansion often means technology needs change - new infrastructure, more licenses, security requirements, etc.",
+      "strength": 1,
+      "icon": "fa-building",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], expanding to [new office] means [infrastructure needs]. Here's how [solution] scales with you...",
+      "example": "New office opening → Network/infrastructure tools → Expansion budget"
+    }
+  ],
+  "person": [
+    {
+      "signal": "Customer/champion job change",
+      "why": "Tried and true, when a customer or champion moves to another company, there's a good chance they'll bring your product along for the journey. If you keep in touch, that is.",
+      "strength": 2,
+      "icon": "fa-briefcase",
+      "tools": [
+        "lemlist Intent",
+        "LinkedIn"
+      ],
+      "template": "Hi [FirstName], congrats on the new role at [company]! As [role], you'll probably want to set up [solution] like you had at [old company].",
+      "example": "Champion moves to new company → Bring solution with them → Easiest sale ever"
+    },
+    {
+      "signal": "Competitor job change",
+      "why": "Chatting with someone who recently left (or was let go) from a competitor presents an opportunity to get intel on churn risks, upcoming renewals, key points of context, and more.",
+      "strength": 2,
+      "icon": "fa-user-secret",
+      "tools": [
+        "lemlist Intent",
+        "LinkedIn"
+      ],
+      "template": "Hi [FirstName], saw you recently left [competitor]. I'd love to learn about your experience with [topic] there. Coffee chat?",
+      "example": "Former competitor employee → Insider intel + potential champion → Competitive intelligence"
+    },
+    {
+      "signal": "Ideal persona recently hired",
+      "why": "New employees want to make an impact. When an ideal persona lands at a target account, it's an opportunity to get in the mix of their ideal tech stack.",
+      "strength": 1,
+      "icon": "fa-user-plus",
+      "tools": [
+        "lemlist Intent",
+        "LinkedIn"
+      ],
+      "template": "Hi [FirstName], congrats on joining [company]! As new [role], you'll need [solution] to [achieve goal]. Happy to show you how...",
+      "example": "New VP of Sales hired → Sales tools → First 90 days budget"
+    },
+    {
+      "signal": "Podcast guest appearance",
+      "why": "So the economic buyer at a target account was just featured on a podcast? Seems like a good trigger to send a congrats and show you're a fan.",
+      "strength": 1,
+      "icon": "fa-microphone",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "Hi [FirstName], loved your insights on [podcast] about [topic]. What you said about [point] really resonated. At [company], we...",
+      "example": "Executive on industry podcast → Personalized outreach → Relationship building"
+    },
+    {
+      "signal": "Social post",
+      "why": "Follow key people at target accounts on social channels. When they post, like it, engage in the convo, and help amplify. It keeps you top of mind and increases the chances of getting that intro call booked.",
+      "strength": 1,
+      "icon": "fa-share-alt",
+      "tools": [
+        "lemlist Intent",
+        "LinkedIn"
+      ],
+      "template": "[Engaging comment on their post] + By the way, [FirstName], this connects to [solution] which might interest you given [context].",
+      "example": "LinkedIn post about challenge → Thoughtful comment + DM → Warm introduction"
+    },
+    {
+      "signal": "Customer/prospect promotion",
+      "why": "Not all job change prospects move organizations. When a customer or ideal prospect gets a promotion, it's often a sign that the team is growing, they'll have additional budget, and that they'll be looking to make a fast impact.",
+      "strength": 1,
+      "icon": "fa-level-up-alt",
+      "tools": [
+        "lemlist Intent",
+        "LinkedIn Sales Navigator"
+      ],
+      "template": "Congrats on the promotion, [FirstName]! As [new role], you now oversee [scope]. Here's how [solution] helps at that scale...",
+      "example": "Manager promoted to Director → Bigger budget + scope → Upsell opportunity"
+    },
+    {
+      "signal": "Personal milestone",
+      "why": "Like professional milestones, personal wins like an alma mater sports championship, birthday, vacation, etc. are sometimes made public. When the occasion calls for it, it's a chance to show you're paying attention and stand out from the pack.",
+      "strength": 1,
+      "icon": "fa-birthday-cake",
+      "tools": [
+        "lemlist Intent",
+        "LinkedIn"
+      ],
+      "template": "[FirstName], congrats on [milestone]! Hope you're celebrating. When you're back, would love to discuss [relevant topic].",
+      "example": "Work anniversary post → Congrats + schedule call → Relationship nurture"
+    },
+    {
+      "signal": "Speaking at conference",
+      "why": "When your target is speaking at an event, it's a perfect icebreaker and shows you're tracking their thought leadership.",
+      "strength": 1,
+      "icon": "fa-presentation",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], excited to hear your talk on [topic] at [event]. Your perspective on [point] is spot on. Let's connect there?",
+      "example": "Speaking at SaaStr → Attend talk → In-person meeting setup"
+    },
+    {
+      "signal": "Published article or thought leadership",
+      "why": "When prospects publish content, they're signaling what they care about. Engaging authentically shows you did your homework.",
+      "strength": 1,
+      "icon": "fa-pen",
+      "tools": [
+        "lemlist Intent",
+        "Google Alerts"
+      ],
+      "template": "[FirstName], your article on [topic] was insightful, especially [specific point]. We see similar challenges with clients using [solution]...",
+      "example": "Published blog about scaling → Comment + reach out → Thought leader connection"
+    },
+    {
+      "signal": "Changed profile description",
+      "why": "LinkedIn profile updates often signal role changes, new priorities, or strategic shifts that create opportunities.",
+      "strength": 1,
+      "icon": "fa-user-edit",
+      "tools": [
+        "LinkedIn Sales Navigator"
+      ],
+      "template": "[FirstName], noticed your updated focus on [new area]. This aligns perfectly with [solution]. Let's discuss?",
+      "example": "Bio now mentions 'digital transformation' → Relevant solution → Strategic alignment"
+    },
+    {
+      "signal": "Joined professional group or association",
+      "why": "Joining industry groups signals active engagement and potential buying cycle initiation.",
+      "strength": 1,
+      "icon": "fa-users-cog",
+      "tools": [
+        "LinkedIn"
+      ],
+      "template": "Hi [FirstName], saw you joined [group]. I'm a member too! Companies in [industry] often need [solution] for [challenge]...",
+      "example": "Joined 'SaaS CFO Forum' → Financial tools → Peer-influenced decision"
+    },
+    {
+      "signal": "Certification or course completion",
+      "why": "Learning signals that someone is building skills for new initiatives or solving current challenges.",
+      "strength": 1,
+      "icon": "fa-graduation-cap",
+      "tools": [
+        "LinkedIn"
+      ],
+      "template": "Congrats on completing [certification], [FirstName]! Implementing [skill] often requires [solution]. Happy to share best practices...",
+      "example": "AWS certification → Cloud infrastructure tools → Technical initiative"
+    },
+    {
+      "signal": "Attended industry event",
+      "why": "Event attendance shows active research phase and openness to new solutions.",
+      "strength": 1,
+      "icon": "fa-calendar",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], saw you attended [event]. What was your biggest takeaway? We often help companies implement [related solution]...",
+      "example": "Attended Dreamforce → Salesforce ecosystem tools → Buying research phase"
+    },
+    {
+      "signal": "Requested demo or trial",
+      "why": "Highest intent signal - they're actively evaluating and comparing solutions.",
+      "strength": 3,
+      "icon": "fa-play-circle",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "Hi [FirstName], thanks for requesting a demo! I'd love to understand [use case] to make our time together valuable. Quick pre-call?",
+      "example": "Demo request → Qualify needs → Personalized presentation"
+    },
+    {
+      "signal": "Downloaded gated content",
+      "why": "Content downloads signal research on specific topics and problems they're trying to solve.",
+      "strength": 1,
+      "icon": "fa-download",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "Hi [FirstName], I saw you downloaded [resource]. As you evaluate [topic], here's additional insight on [related area]...",
+      "example": "Downloaded 'Sales Automation Guide' → Sales tools → Education to sales transition"
+    }
+  ],
+  "tech": [
+    {
+      "signal": "Tech stack adjacency",
+      "why": "Whether your product is complementary or competition, getting a peek at a company's tech stack configuration will help you stand out with value and show empathy with pain points.",
+      "strength": 1,
+      "icon": "fa-layer-group",
+      "tools": [
+        "lemlist Intent",
+        "BuiltWith",
+        "Wappalyzer"
+      ],
+      "template": "[FirstName], I saw you're using [adjacent tool]. Great choice! [Solution] integrates perfectly to [benefit]. Demo?",
+      "example": "Using Salesforce → Propose Salesforce integration → Perfect fit conversation"
+    },
+    {
+      "signal": "Competitor feature deprecation",
+      "why": "If competitors stop supporting features or deprecate product lines, everyone who gets value from those features is now in the market for a new offering.",
+      "strength": 3,
+      "icon": "fa-code-branch",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], I know [competitor] is deprecating [feature] that you use. [Solution] not only replaces it but adds [improvement].",
+      "example": "Google deprecates feature → Alternative solution → Forced migration opportunity"
+    },
+    {
+      "signal": "Integration removal (external)",
+      "why": "Just like adding an integration to a tech stack is a signal of intent, the same goes for removal. It could mean the stripped tool was not adding value as intended and is being replaced for something more feature rich.",
+      "strength": 2,
+      "icon": "fa-plug",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], noticed you removed [integration]. Looking for better [functionality]? [Solution] offers [improvement]...",
+      "example": "Removed Zapier integration → Native integration tool → Better solution available"
+    },
+    {
+      "signal": "Website technology change",
+      "why": "Technology stack changes often signal larger strategic initiatives or growing pains that need solving.",
+      "strength": 1,
+      "icon": "fa-code",
+      "tools": [
+        "lemlist Intent",
+        "BuiltWith"
+      ],
+      "template": "[FirstName], saw you migrated to [new tech]. Companies making this move often need [solution] for [challenge]...",
+      "example": "Migrated to Shopify → E-commerce tools → Platform-specific solutions"
+    },
+    {
+      "signal": "Analytics tag added to website",
+      "why": "This shows an initiative to understand user behavior and demographics of users on a web property. It's often tied to a marketing or growth lead joining a company.",
+      "strength": 1,
+      "icon": "fa-chart-line",
+      "tools": [
+        "lemlist Intent",
+        "BuiltWith"
+      ],
+      "template": "[FirstName], noticed you added [analytics tool]. Growing focus on data? [Solution] complements this by [benefit]...",
+      "example": "Added Google Analytics → Marketing attribution tools → Data-driven initiative"
+    },
+    {
+      "signal": "Advertising tracking tag added to website",
+      "why": "This shows an initiative to scale GTM channel investment and track conversion from that investment. This behavior is often driven by demand gen or marketing ops roles.",
+      "strength": 1,
+      "icon": "fa-ad",
+      "tools": [
+        "lemlist Intent",
+        "BuiltWith"
+      ],
+      "template": "[FirstName], saw you're scaling paid advertising. [Solution] helps optimize [metric] from your ad spend...",
+      "example": "Added Facebook Pixel → Ad optimization tools → Performance marketing push"
+    },
+    {
+      "signal": "Website relaunch",
+      "why": "A significant update or complete overhaul of a prospect's website signals a strategic shift or a new direction in their go-to-market approach.",
+      "strength": 1,
+      "icon": "fa-sync",
+      "tools": [
+        "lemlist Intent",
+        "BuiltWith"
+      ],
+      "template": "[FirstName], love the new website! This level of investment in digital presence suggests [initiative]. [Solution] supports this by...",
+      "example": "Full website redesign → Web experience tools → Digital transformation"
+    },
+    {
+      "signal": "Product or feature launch (external)",
+      "why": "When target accounts launch a new product, it's a signal that could mean a change in strategy, a new line of hiring, or a new set of customers they can sell to.",
+      "strength": 1,
+      "icon": "fa-rocket",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "Congrats on launching [product], [FirstName]! Scaling [product] will require [solution] for [challenge].",
+      "example": "Launched new product line → Infrastructure tools → Scaling needs"
+    },
+    {
+      "signal": "Surge or decline in website traffic",
+      "why": "Website traffic in either direction can be a signal of pent up demand (rapid growth) or cause for concern (rapid churn). If your product is priced on traffic, it's a signal to reach out and offer support.",
+      "strength": 1,
+      "icon": "fa-traffic-light",
+      "tools": [
+        "lemlist Intent",
+        "SimilarWeb"
+      ],
+      "template": "[FirstName], noticed [traffic change]. Whether scaling up or optimizing, [solution] helps by [benefit]...",
+      "example": "Traffic doubled → Performance optimization tools → Scaling pains"
+    },
+    {
+      "signal": "Mobile app launched",
+      "why": "App launches signal investment in mobile-first strategy and create new technical and operational needs.",
+      "strength": 1,
+      "icon": "fa-mobile-alt",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], congrats on the mobile app launch! Mobile-first companies often need [solution] for [mobile-specific challenge]...",
+      "example": "iOS app released → Mobile analytics/testing tools → New platform requirements"
+    }
+  ],
+  "product": [
+    {
+      "signal": "Pricing page activity",
+      "why": "Visits to the pricing page—especially when those visits have a lot of toggling and activity—are often a signal of purchase consideration.",
+      "strength": 2,
+      "icon": "fa-dollar-sign",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], I see there's interest in [solution]. What questions can I answer about pricing and packaging to help your decision?",
+      "example": "Pricing page visited 5 times → High buying intent → Strike while hot"
+    },
+    {
+      "signal": "Surge in product usage",
+      "why": "Spikes in product usage over a short period of time indicate rapid product adoption (or an organization running a proof of concept). It's worth looking into.",
+      "strength": 3,
+      "icon": "fa-chart-line",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "[FirstName], amazing to see usage spike! As you scale, you might hit [limit]. Let's discuss [upgrade/solution]...",
+      "example": "Usage increased 300% → Upsell opportunity → Capacity planning"
+    },
+    {
+      "signal": "Compliance or IT user identification",
+      "why": "While compliance and IT users are not typically economic buyers or champions, they're tasked with making sure products meet security and cost benchmarks. This is usually a strong buying signal.",
+      "strength": 3,
+      "icon": "fa-shield-alt",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "Hi [FirstName], I see IT/compliance is evaluating [solution]. Happy to provide [security docs/compliance info] to help your review...",
+      "example": "CISO logged in → Security review → Purchasing approval stage"
+    },
+    {
+      "signal": "Rapid rise and fall in product usage",
+      "why": "A common enterprise product selection tactic is to run a high-scale test (think connecting a streaming data workload) to assess product performance and UX. You might be getting evaluated.",
+      "strength": 2,
+      "icon": "fa-wave-square",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "[FirstName], noticed usage spike then drop. Was that a POC? I'd love to get feedback and address any concerns...",
+      "example": "Stress test pattern → Competitor comparison → Evaluation phase"
+    },
+    {
+      "signal": "Multiple workspaces created by single org",
+      "why": "When there are multiple sign-ups from different departments as the same organization, it's a sign to follow up on a potential consolidation or upsell.",
+      "strength": 3,
+      "icon": "fa-sitemap",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "[FirstName], I noticed [department A] and [department B] are both using [solution] separately. Let's consolidate for better pricing and management...",
+      "example": "3 departments using free plan → Enterprise consolidation → Volume discount"
+    },
+    {
+      "signal": "Feature request submitted",
+      "why": "Feature requests show what's blocking adoption or preventing expansion. These are golden opportunities.",
+      "strength": 2,
+      "icon": "fa-lightbulb",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "Hi [FirstName], thanks for the [feature] request! We're actually building this for [release date]. Let me show you what's coming...",
+      "example": "Requested API access → API launching soon → Perfect timing for upsell"
+    },
+    {
+      "signal": "Trial extension requested",
+      "why": "Trial extensions indicate genuine interest but potential blockers - budget, buy-in, or technical issues.",
+      "strength": 2,
+      "icon": "fa-hourglass-half",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "[FirstName], happy to extend your trial! What's blocking the decision? Let me help address [concern]...",
+      "example": "Needs 2 more weeks → Waiting for budget approval → Close to conversion"
+    },
+    {
+      "signal": "Documentation page views",
+      "why": "Heavy documentation usage shows technical evaluation and implementation planning.",
+      "strength": 1,
+      "icon": "fa-book",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], saw you're deep in the docs! Any questions about implementing [feature]? Happy to connect you with our solutions team...",
+      "example": "Read API docs for 2 hours → Technical buyer → Implementation phase"
+    },
+    {
+      "signal": "Product video watched",
+      "why": "Video completion rates show genuine interest and help identify what features matter most.",
+      "strength": 1,
+      "icon": "fa-video",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "Hi [FirstName], glad you watched our [feature] video! That's our most popular use case. Want to see it in action with your data?",
+      "example": "Watched integration video → Specific need identified → Targeted demo"
+    },
+    {
+      "signal": "Competitor comparison page visited",
+      "why": "Visiting comparison pages shows active evaluation and consideration of alternatives.",
+      "strength": 2,
+      "icon": "fa-balance-scale-right",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], I see you're comparing [solution] to [competitor]. Here are the 3 key differences that matter for [use case]...",
+      "example": "Read 'vs Competitor' page → Active evaluation → Competitive positioning"
+    },
+    {
+      "signal": "Case study page visited",
+      "why": "Case study views indicate they're looking for proof and validation from similar companies.",
+      "strength": 1,
+      "icon": "fa-file-alt",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], saw you checked out the [company] case study. They're similar to you in [aspect]. Want to hear how they achieved [result]?",
+      "example": "Read competitor case study → Social proof seeking → Reference call setup"
+    },
+    {
+      "signal": "ROI calculator used",
+      "why": "Using an ROI calculator shows they're building a business case and getting close to decision.",
+      "strength": 2,
+      "icon": "fa-calculator",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "Hi [FirstName], I see you ran the ROI calculator. Based on your inputs, [solution] could generate [specific value]. Let's refine these numbers together...",
+      "example": "ROI calculation complete → Building business case → Help close internally"
+    },
+    {
+      "signal": "Integrations page visited",
+      "why": "Integration research shows they're thinking about how your product fits their tech stack.",
+      "strength": 1,
+      "icon": "fa-plug",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], saw you're looking at integrations. We work great with [their tech stack]. Want to see the [specific integration] in action?",
+      "example": "Checked Salesforce integration → Tech stack fit → Implementation planning"
+    },
+    {
+      "signal": "Security page visited",
+      "why": "Security page views indicate enterprise evaluation and compliance requirements.",
+      "strength": 2,
+      "icon": "fa-lock",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "Hi [FirstName], I see security is important to you. We're [SOC 2/GDPR/etc] compliant. Want our full security documentation?",
+      "example": "Read security page → Enterprise buyer → Compliance check phase"
+    },
+    {
+      "signal": "Shared account with colleague",
+      "why": "Sharing access shows they're getting buy-in from team members and expanding evaluation.",
+      "strength": 2,
+      "icon": "fa-user-plus",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "[FirstName], great to see [colleague] joining! As you expand evaluation, let me know if you want to add more team members or discuss enterprise plans...",
+      "example": "Added 3 team members → Org-wide consideration → Enterprise opportunity"
+    },
+    {
+      "signal": "Export data action",
+      "why": "Data exports can signal either adoption (good) or potential churn (needs attention).",
+      "strength": 1,
+      "icon": "fa-file-export",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "[FirstName], saw you exported data. Are you integrating this elsewhere, or is something not working? Happy to help...",
+      "example": "Large data export → Either integration or churn risk → Proactive outreach"
+    },
+    {
+      "signal": "API key generated",
+      "why": "API key creation shows technical integration and serious implementation intent.",
+      "strength": 2,
+      "icon": "fa-key",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "Hi [FirstName], excited to see you generated API keys! Need help with implementation? Our dev team can help get you started...",
+      "example": "Created API credentials → Developer involved → Implementation phase"
+    },
+    {
+      "signal": "Abandoned shopping cart",
+      "why": "Cart abandonment in B2B shows price sensitivity or approval needs - both addressable.",
+      "strength": 2,
+      "icon": "fa-shopping-cart",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "[FirstName], I noticed you started checkout but didn't complete. What questions can I answer? Or need approval help?",
+      "example": "Selected enterprise plan, didn't buy → Possible price objection → Negotiation opportunity"
+    },
+    {
+      "signal": "Support article viewed repeatedly",
+      "why": "Repeated views of specific support content shows a pain point or confusion that needs addressing.",
+      "strength": 1,
+      "icon": "fa-question-circle",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "Hi [FirstName], saw you're reading about [topic] a lot. Can I help clarify or show you a better way to [solve problem]?",
+      "example": "Read same article 5 times → Struggling with feature → Onboarding help needed"
+    },
+    {
+      "signal": "Negative NPS score",
+      "why": "Low NPS scores are churn risks that need immediate attention and recovery plans.",
+      "strength": 3,
+      "icon": "fa-frown",
+      "tools": [
+        "lemlist"
+      ],
+      "template": "[FirstName], I'm sorry we didn't meet expectations. Can we schedule 30 min to understand what went wrong and how to fix it?",
+      "example": "NPS score of 3 → Churn risk → Executive intervention"
+    }
+  ],
+  "community": [
+    {
+      "signal": "Active in online community",
+      "why": "Community engagement shows thought leadership and willingness to help others - perfect champion profile.",
+      "strength": 1,
+      "icon": "fa-comments",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], love your contributions in [community]! Your insight on [topic] was spot-on. We help companies with [related challenge]...",
+      "example": "10+ Slack group answers → Community leader → Champion potential"
+    },
+    {
+      "signal": "Asked question in community",
+      "why": "Questions in communities are explicit pain points looking for solutions.",
+      "strength": 2,
+      "icon": "fa-question",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "Hi [FirstName], saw your question in [community] about [problem]. We actually built [solution] specifically for this. Happy to show you...",
+      "example": "Asked about integrations → Solution has that → Perfect product-market fit"
+    },
+    {
+      "signal": "Mentioned pain point in forum",
+      "why": "Public complaints or frustrations are buying signals in disguise.",
+      "strength": 2,
+      "icon": "fa-comment-dots",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], I saw you mention [pain point] in [forum]. We've helped companies solve this exact issue with [solution]...",
+      "example": "Reddit post complaining about tool → Alternative solution → Frustrated buyer"
+    },
+    {
+      "signal": "Upvoted feature request",
+      "why": "Upvoting features shows what they need but don't have in current tools.",
+      "strength": 1,
+      "icon": "fa-thumbs-up",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "Hi [FirstName], I see [feature] matters to you. [Solution] has this built-in. Want to see how it works?",
+      "example": "Upvoted 'better reporting' → Product has advanced analytics → Feature-led pitch"
+    },
+    {
+      "signal": "Joined competitor's community",
+      "why": "Joining competitor communities shows active evaluation or current usage with potential pain points.",
+      "strength": 1,
+      "icon": "fa-user-friends",
+      "tools": [
+        "LinkedIn"
+      ],
+      "template": "[FirstName], saw you joined [competitor community]. If you ever need a comparison or alternative, [solution] offers [differentiation]...",
+      "example": "Joined HubSpot community → HubSpot user → Competitive intel"
+    },
+    {
+      "signal": "Shared competitor content",
+      "why": "Sharing competitor content shows awareness of category and research behavior.",
+      "strength": 1,
+      "icon": "fa-share",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], saw you shared [competitor]'s content on [topic]. We do [topic] differently by [unique approach]. Interested in comparing?",
+      "example": "Shared Gong content → Sales tech interested → Competitor awareness"
+    },
+    {
+      "signal": "Commented on industry blog",
+      "why": "Blog comments show active research and thought process on relevant topics.",
+      "strength": 1,
+      "icon": "fa-comment-alt",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "Hi [FirstName], great comment on [blog post] about [topic]. This aligns with [solution]'s approach. Want to discuss?",
+      "example": "Commented on 'Best CRMs 2024' → CRM evaluation → Active buyer"
+    },
+    {
+      "signal": "Reviewed competitor on G2",
+      "why": "Reviews show first-hand experience and often reveal what they wish the product had.",
+      "strength": 2,
+      "icon": "fa-star",
+      "tools": [
+        "G2",
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], I read your [competitor] review. You mentioned wanting [feature they lack]. [Solution] has this built-in. Demo?",
+      "example": "Reviewed competitor, wanted better UX → Product has better UX → Switching opportunity"
+    },
+    {
+      "signal": "Attended competitor user conference",
+      "why": "Conference attendance shows heavy investment in category and potential expansion needs.",
+      "strength": 1,
+      "icon": "fa-users",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], how was [competitor conference]? As you think about [topic from event], [solution] offers [complementary value]...",
+      "example": "Attended Salesforce Dreamforce → Ecosystem partner → Complementary tool pitch"
+    },
+    {
+      "signal": "Retweeted industry influencer",
+      "why": "Social engagement patterns reveal interests, priorities, and peer influences.",
+      "strength": 1,
+      "icon": "fa-retweet",
+      "tools": [
+        "Twitter/X"
+      ],
+      "template": "[FirstName], saw you shared [influencer]'s take on [topic]. We think about this similarly at [company]. Here's our approach...",
+      "example": "Retweeted Jason Lemkin on SaaS metrics → SaaS tool buyer → Thought leadership connection"
+    },
+    {
+      "signal": "Subscribed to competitor newsletter",
+      "why": "Newsletter subscriptions show ongoing interest in category and competitor monitoring.",
+      "strength": 1,
+      "icon": "fa-envelope",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "Hi [FirstName], I see you follow [competitor content]. We publish similar insights on [topic]. Want our perspective?",
+      "example": "Subscribed to Drift newsletter → Conversational marketing → Category interest"
+    },
+    {
+      "signal": "Followed competitor on social",
+      "why": "Social follows indicate awareness and potential evaluation of alternatives.",
+      "strength": 1,
+      "icon": "fa-user-check",
+      "tools": [
+        "LinkedIn",
+        "Twitter/X"
+      ],
+      "template": "[FirstName], I notice you follow [competitor]. If you're evaluating [category], [solution] differentiates by [unique value]...",
+      "example": "Followed 3 competitors → Active research → Comparison opportunity"
+    },
+    {
+      "signal": "Downloaded competitor content",
+      "why": "Content downloads from competitors show active problem-solving and solution research.",
+      "strength": 1,
+      "icon": "fa-file-download",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "Hi [FirstName], saw you're researching [topic]. Our [competing resource] offers a different take. Want both perspectives?",
+      "example": "Downloaded 'Sales Playbook' from competitor → Sales tools → Alternative option"
+    },
+    {
+      "signal": "Participated in competitor webinar",
+      "why": "Webinar participation shows high engagement and active evaluation of solutions.",
+      "strength": 2,
+      "icon": "fa-presentation",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], how was [competitor]'s webinar on [topic]? We approach [topic] differently by [approach]. Want to compare?",
+      "example": "Attended Zoom webinar → Video conferencing evaluation → Alternative demo"
+    },
+    {
+      "signal": "Mentioned in online discussion",
+      "why": "Being tagged or mentioned shows you're relevant to their network and challenges.",
+      "strength": 1,
+      "icon": "fa-at",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], thanks for the mention in your discussion about [topic]! Happy to expand on [solution]'s approach to this...",
+      "example": "Tagged in LinkedIn discussion → Relevant to their challenge → Inbound interest"
+    }
+  ],
+  "event": [
+    {
+      "signal": "Registered for industry event",
+      "why": "Event registration shows active engagement in industry and openness to conversations.",
+      "strength": 1,
+      "icon": "fa-ticket-alt",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], see you at [event]! Want to grab coffee and discuss [relevant topic]?",
+      "example": "Registered for SaaStr → Schedule meeting → In-person connection"
+    },
+    {
+      "signal": "Speaking at conference",
+      "why": "Speakers are influential and highly engaged - perfect prospects or champions.",
+      "strength": 1,
+      "icon": "fa-microphone-alt",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], excited for your [event] talk on [topic]! This aligns with [solution]. Can we connect at the event?",
+      "example": "Speaking at conference → Attend talk → VIP meeting setup"
+    },
+    {
+      "signal": "Sponsored event",
+      "why": "Event sponsorship shows budget, marketing initiatives, and brand-building focus.",
+      "strength": 1,
+      "icon": "fa-handshake",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], congrats on sponsoring [event]! That level of investment shows you're serious about [market]. Let's discuss how [solution] supports this...",
+      "example": "Event sponsor → Marketing budget → Brand awareness tools"
+    },
+    {
+      "signal": "Hosting event or webinar",
+      "why": "Hosting events signals thought leadership positioning and growth initiatives.",
+      "strength": 1,
+      "icon": "fa-calendar-alt",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], your [event] on [topic] looks great! Companies scaling events often need [solution] for [challenge]. Interested?",
+      "example": "Hosting webinar series → Event tech/marketing tools → Operational need"
+    },
+    {
+      "signal": "Booth at trade show",
+      "why": "Trade show presence indicates active selling, partner ecosystem development, or market expansion.",
+      "strength": 1,
+      "icon": "fa-store",
+      "tools": [
+        "lemlist Intent"
+      ],
+      "template": "[FirstName], I'll be at [tradeshow] too! Want to stop by and see [solution] in action? Booth [number].",
+      "example": "Exhibiting at conference → Visit their booth → Relationship building"
+    }
+  ]
+}
