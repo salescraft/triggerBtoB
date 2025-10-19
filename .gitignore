@@ -1,0 +1,14 @@
+# Temporary files
+*.tmp
+*_tmp.html
+*.pyc
+__pycache__/
+
+# Development files
+structure_base.txt
+rebuild_signals.py
+
+# System files
+.DS_Store
+*.swp
+*.swo
