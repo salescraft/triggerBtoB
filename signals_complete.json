@@ -2,7 +2,7 @@
   "company": [
     {
       "signal": "Stale opportunity",
-      "why": "A lot of initial convos go well but die on the vine due to budget, timing, feature gap, etc. After some time, these are some of the lowest-hanging fruit to pick up. Even better if you have a new feature to revitalize interest.",
+      "why": "Dead deals aren't really dead—they're just sleeping. Budget freed up? New decision-maker? Your competitor dropped the ball? These 'lost' opps have 3x higher close rates than cold outreach because the relationship already exists. The key: give them a NEW reason to say yes (new feature, case study, pricing). Strike before your competition does.",
       "strength": 3,
       "icon": "fa-bullseye",
       "tools": [
@@ -13,7 +13,7 @@
     },
     {
       "signal": "Surge in email opens (internal)",
-      "why": "Hint: The email opens probably aren't coming from just one person. Rather, it's a sign that your email is being passed around to other stakeholders.",
+      "why": "One person opening your email 8 times? That's not obsession—it's your champion forwarding it around. This is buying committee activation in real-time. Multiple opens = multiple stakeholders = deal momentum. Smart move: Ask who else should be in the conversation and offer a team demo. This is your window to expand.",
       "strength": 3,
       "icon": "fa-envelope-open",
       "tools": [
@@ -24,7 +24,7 @@
     },
     {
       "signal": "Legislation change",
-      "why": "Sometimes the government steps in and passes legislation that impacts markets. When your product is an easy fix for that change, it's a lot easier to convert a customer or book an intro.",
+      "why": "Regulations create urgency like nothing else. GDPR scared companies into spending millions overnight. New laws = mandatory budgets + executive attention + shortened sales cycles. Position your solution as the compliance path of least resistance. Pro tip: Get ahead of the regulation news cycle and you'll own the category.",
       "strength": 3,
       "icon": "fa-balance-scale",
       "tools": [
@@ -36,7 +36,7 @@
     },
     {
       "signal": "Platform policy change",
-      "why": "Companies and services have been wiped out by policy changes to distribution platforms (updates to Gmail sender guidelines come to mind). When this happens, it causes fear, uncertainty, and doubt—FUD that your product can potentially curb.",
+      "why": "When Gmail changed sender requirements, email tools made millions in weeks. Platform shifts create instant pain—and pain creates buying intent. Companies scramble to adapt or risk losing their distribution. Your timing window is 30-90 days max. Move fast, educate hard, close deals before the panic subsides.",
       "strength": 3,
       "icon": "fa-exclamation-triangle",
       "tools": [
@@ -47,7 +47,7 @@
     },
     {
       "signal": "Competitor close or acquisition",
-      "why": "When competitors sunset their service or get acquired, their customers often reenter the market to refill the gap.",
+      "why": "Sunset announcements are goldmines. Thousands of users suddenly need a new home, and they're already trained on the workflow. No cold outreach needed—they're actively searching. The winners? Companies who have comparison pages ready, fast migration support, and special 'refugee' pricing. Build the welcome mat before they arrive.",
       "strength": 3,
       "icon": "fa-building",
       "tools": [
@@ -59,7 +59,7 @@
     },
     {
       "signal": "Surge in layoffs",
-      "why": "Reduction in force is a signal of need for efficiency or strategy not working as intended. While often seen as a counter-signal, it can be a positive sign for a need to consolidate technology or bring on a new tool to replace the function of an employee.",
+      "why": "Layoffs signal efficiency mode is ON. Yes, budgets tighten—but tools that promise ROI, automation, or cost savings actually get MORE attention. The key: don't sell expansion, sell consolidation. 'Do more with less' beats 'do more' every time during RIFs. Wrong move: ignoring them. Right move: tailored efficiency pitch.",
       "strength": 2,
       "icon": "fa-user-minus",
       "tools": [
@@ -71,7 +71,7 @@
     },
     {
       "signal": "Negative product review",
-      "why": "Sites like G2 and Trustpilot offer a wealth of reviews from product users. Even if generally positive, reviews often uncover frustrations or limitations of the product. If your product addresses those pain points, it's a good opportunity to reach out or chime in.",
+      "why": "G2 rants and Reddit complaints are buying signals in disguise. Someone frustrated enough to write a review is frustrated enough to switch. Track competitor reviews, filter for your ICP, and reach out with: 'Saw your feedback on [Tool]. We built [Your Product] specifically to solve that pain.' Timing beats cold calling 10:1.",
       "strength": 2,
       "icon": "fa-star-half-alt",
       "tools": [
@@ -83,7 +83,7 @@
     },
     {
       "signal": "Form or chat flow abandonment",
-      "why": "In addition to abandoning a sign-up flow, form fills and live chats are occasionally abandoned (especially if there's a lag in live chat response time). Dig into it.",
+      "why": "They filled out 80% of your demo form and bounced? That's not rejection—that's hesitation. Something scared them off (too many fields, unclear pricing, wrong timing). A simple 'Hey, noticed you stopped by—what can I clarify?' email converts 20-30% of these into meetings. Low-hanging fruit hiding in your analytics.",
       "strength": 2,
       "icon": "fa-comments",
       "tools": [
@@ -94,7 +94,7 @@
     },
     {
       "signal": "Support ticket creation",
-      "why": "Seems obvious, but oftentimes support teams and go-to-market teams don't talk to one another. When a support ticket is created (especially if it's from a high-fit account), it's usually worth a look from the GTM team.",
+      "why": "Support tickets = pain points = budgets getting unlocked. Someone struggling with their current tool is mentally shopping for alternatives. If your product solves that SPECIFIC pain, you're not interrupting—you're rescuing. Use tools like lemlist Intent to catch these moments and position yourself as the immediate fix.",
       "strength": 2,
       "icon": "fa-ticket-alt",
       "tools": [
@@ -105,7 +105,7 @@
     },
     {
       "signal": "Negative media coverage",
-      "why": "In the unfortunate scenario that a target account runs into PR trouble, it can be a catalyst for making a change—a change that may require new solutions to address a problem.",
+      "why": "PR disasters force change. A data breach makes security tools essential overnight. Exec scandal? Time for new leadership. Bad earnings? Cost-cutting tools get greenlit. Approach with empathy, not opportunism: 'Given recent events, here's how [Solution] helps companies rebuild trust.' Crisis = catalyst for decisions that took months.",
       "strength": 2,
       "icon": "fa-newspaper",
       "tools": [
@@ -117,7 +117,7 @@
     },
     {
       "signal": "Surge in hiring",
-      "why": "Hiring is a sign that there's a need to solve a problem. If your product can help, it's a strong signal to connect and show how.",
+      "why": "When companies hire aggressively, they need tools to scale. New employees = new seats, new workflows, new infrastructure. Hiring 50 SDRs? They need your sales engagement platform. Hiring 20 engineers? They need your dev tools. Track LinkedIn job postings and connect growth to your tool category. Expansion mode is buying mode.",
       "strength": 1,
       "icon": "fa-users",
       "tools": [
@@ -129,7 +129,7 @@
     },
     {
       "signal": "Content consumption",
-      "why": "Tried and true way of surfacing engaged leads—those who click the emails, sign up for the webinars, read the blog posts, watch the videos, etc.",
+      "why": "Email clicks, webinar signups, guide downloads—these aren't vanity metrics, they're intent signals. Someone consuming multiple pieces of your content is self-educating and building internal buy-in. The mistake: treating all content equally. High-intent content (pricing guides, comparison pages) beats top-of-funnel (blog posts) by 10x. Route accordingly.",
       "strength": 1,
       "icon": "fa-newspaper",
       "tools": [
@@ -141,7 +141,7 @@
     },
     {
       "signal": "Capital raised/new funding secured",
-      "why": "Caution: This one is overused. However, it does mean that scale will follow. That scale could be a strong signal to purchase new software.",
+      "why": "Fresh funding = spending mode... for about 6 months. After that, it's back to scrutiny. The sweet spot: 30-90 days post-announcement when they're hiring, scaling infrastructure, and building the 'growth stack.' Be in their inbox before their hiring plan is finalized. Early conversations = embedded in the roadmap.",
       "strength": 1,
       "icon": "fa-money-bill-wave",
       "tools": [
@@ -153,7 +153,7 @@
     },
     {
       "signal": "Earnings call/10-K release",
-      "why": "While a pretty loose signal, these financial reports can provide insight into a widespread initiative within a target account. It's decent leverage to book a meeting.",
+      "why": "Earnings calls reveal priorities. CEO says 'international expansion'? Localization tools, payment processors, and legal software all just became urgent. Public companies broadcast their roadmap quarterly—and smart sellers listen. Find the pain points mentioned 3+ times and pitch solutions to those EXACT challenges. This is insider trading for sales.",
       "strength": 1,
       "icon": "fa-chart-bar",
       "tools": [
@@ -164,7 +164,7 @@
     },
     {
       "signal": "Webinar participation",
-      "why": "Indicates active interest in a product offering and the desire to deepen understanding. Often a sign of a prospect evaluating how the product fits their needs.",
+      "why": "Webinar attendees who stay past 30 minutes are evaluating solutions, not just learning. They're comparing, taking notes, and potentially building a business case. Follow up within 24 hours while your brand is fresh: 'Loved seeing you at [Webinar]. What part resonated most?' You're not selling—you're continuing the conversation.",
       "strength": 1,
       "icon": "fa-video",
       "tools": [
@@ -175,7 +175,7 @@
     },
     {
       "signal": "New leadership recently hired (CEO, C-level, board)",
-      "why": "Bringing on a new CEO, C-level executive, or board member is a sign that change is happening in the form of new initiatives, new hires, strategy adjustments—all possible triggers where a new technology can help fill a gap.",
+      "why": "New execs bring new budgets, new vendors, and 90-day mandates to 'make an impact.' They haven't been captured by the status quo yet. The first 100 days are your window—they're reworking the stack, challenging old contracts, and proving their worth. Your pitch: 'You weren't here for the old decision. Here's the modern approach.'",
       "strength": 1,
       "icon": "fa-user-tie",
       "tools": [
@@ -187,7 +187,7 @@
     },
     {
       "signal": "Merger or acquisition",
-      "why": "Rare these days, but integrating a new product, team, line of business, etc. is not an easy task. Still, it's one that your product can potentially help with.",
+      "why": "M&A creates chaos: duplicate tools, conflicting systems, confused teams. Consolidation is mandatory, and someone's vendor is getting cut. Position yourself as the unified solution before the integration team standardizes on your competitor. Bonus: acquiring companies often enforce their stack on acquired companies. Know who's the buyer.",
       "strength": 1,
       "icon": "fa-handshake",
       "tools": [
@@ -199,7 +199,7 @@
     },
     {
       "signal": "Job opening(s)",
-      "why": "Hiring people is a sign that there's a gap that needs to be filled. It's possible that gap can be addressed by your product or that the person to address the gap would benefit from your product.",
+      "why": "Job postings are budget approvals in disguise. Hiring a 'Head of Sales Ops'? They need CRM, engagement, and analytics tools. Posting for a 'Security Engineer'? Someone just allocated $500K for infosec. Match your ICP roles to your product category and reach out BEFORE they start. Be part of the onboarding plan.",
       "strength": 1,
       "icon": "fa-briefcase",
       "tools": [
@@ -211,7 +211,7 @@
     },
     {
       "signal": "Award or recognition received",
-      "why": "When a target account is recognized (think Cloud 100), or someone within that account is (think 30 under 30), it's an opportunity to send a congrats. Just try to make it relevant.",
+      "why": "Awards = validation = marketing moments. Companies love promoting wins, and that means stakeholder attention is high. 'Congrats on [Award]—we work with [Similar Winner] to...' instantly leverages social proof. Plus, award-winning companies often get budget boosts to 'maintain momentum.' Strike while morale and attention are high.",
       "strength": 1,
       "icon": "fa-award",
       "tools": [
@@ -223,7 +223,7 @@
     },
     {
       "signal": "Customer story published (internal)",
-      "why": "When a customer story is made public (especially when that story has hard numbers), it's a good time to share it with prospects in a related space. Even better if they're competitors to the customer featured in the story.",
+      "why": "When a customer gives you a testimonial, they're in love. That's the moment to expand. 'Would you share this story publicly? In exchange, let's explore [Upsell Feature].' Happy customers have loose budgets and high trust. Use success stories as expansion triggers, not just marketing collateral.",
       "strength": 1,
       "icon": "fa-file-alt",
       "tools": [
@@ -234,7 +234,7 @@
     },
     {
       "signal": "Region expansion",
-      "why": "Moving into a new market could mean localized copy, policy restrictions (think GDPR), real estate requirements, etc. These are all potential buying triggers.",
+      "why": "New markets = new compliance, new payments, new support needs. A US company entering Europe needs GDPR tools, SEPA payments, and EU hosting. They're Googling 'best [tool] for Europe' and your SEO better be ready. Offer 'expansion packages' and position yourself as the regional expert. First mover wins.",
       "strength": 1,
       "icon": "fa-globe",
       "tools": [
@@ -245,7 +245,7 @@
     },
     {
       "signal": "Offer expiration (internal)",
-      "why": "When there's a planned price increase or a holiday offer, the deadline offers a reason for a prospect to take action.",
+      "why": "Trial ending? Discount expiring? Special pricing running out? Expiration creates urgency, but ONLY if they know value. Don't just say 'your trial ends Friday'—say 'your trial ends Friday, and here's what you'll lose access to.' Paint the pain of going back to the old way. Fear of loss > promise of gain.",
       "strength": 1,
       "icon": "fa-clock",
       "tools": [
@@ -256,7 +256,7 @@
     },
     {
       "signal": "Prospect or customer email bounce (internal)",
-      "why": "When an email sent to a high-fit user bounces, it's worth a look to see what happened. There may have been a change of employment, giving you a reason to connect with a different point of contact.",
+      "why": "Bounced emails = job changes, layoffs, or inbox migrations. If it's a champion who left, track them to their new company—they'll bring you along. If they're still there but the email changed, it's a re-engagement opportunity: 'Saw your email bounced. Still the right contact for [Topic]?' Small signal, big opportunity.",
       "strength": 1,
       "icon": "fa-exclamation-circle",
       "tools": [
@@ -268,7 +268,7 @@
     },
     {
       "signal": "Professional milestone",
-      "why": "Recognition in the form of awards, news coverage, tenure, etc. are milestones that can be acknowledged to cater to a contact's ego. Can't hurt, right?",
+      "why": "Work anniversaries, promotions, certifications—milestones are relationship fuel. 'Congrats on 5 years at [Company]! Would love to reconnect about [Relevant Topic].' People are more open to conversations during positive moments. It's warm outreach disguised as celebration. Plus, promotions = new budgets.",
       "strength": 1,
       "icon": "fa-trophy",
       "tools": [
@@ -280,7 +280,7 @@
     },
     {
       "signal": "Positive media coverage",
-      "why": "A soft signal, but a signal nonetheless. When a prospect or customer is covered by a media outlet (e.g., TechCrunch, Bloomberg, etc.), it provides intel on company direction and can offer up a reason to reach out.",
+      "why": "Press mentions = momentum. Featured in TechCrunch? They're hiring, fundraising, or launching something big. Positive coverage signals 'growth mode,' which means budget expansion. Your message: 'Saw the [Publication] feature—congrats! Companies at your stage usually need...' Ride the wave, don't ignore it.",
       "strength": 1,
       "icon": "fa-newspaper",
       "tools": [
@@ -292,7 +292,7 @@
     },
     {
       "signal": "New customer story published",
-      "why": "Social proof and envy are strong motivators. When your team publishes a new case study, story, quote, etc., it's an opportunity to reach out to similar accounts and the direct competition.",
+      "why": "When competitors publish case studies, they're advertising their customer list—and their weaknesses. Read between the lines: what problems did they NOT solve? What features are missing? Reach out to similar companies in that vertical: 'Saw [Competitor]'s story about [Vertical]. We've helped [Similar Companies] with [Gap].' Competitive intelligence, served fresh.",
       "strength": 1,
       "icon": "fa-book",
       "tools": [
@@ -350,7 +350,7 @@
   "person": [
     {
       "signal": "Customer/champion job change",
-      "why": "Tried and true, when a customer or champion moves to another company, there's a good chance they'll bring your product along for the journey. If you keep in touch, that is.",
+      "why": "Your best customers are your best salespeople—even after they leave. Champions who loved your product will push for it at their new company if you stay in touch. The 90-day window is critical: they're assessing tools, building their stack, and proving their expertise. Make it easy: 'Want to bring [Product] to [New Company]? Here's our team plan.'",
       "strength": 2,
       "icon": "fa-briefcase",
       "tools": [
@@ -362,7 +362,7 @@
     },
     {
       "signal": "Competitor job change",
-      "why": "Chatting with someone who recently left (or was let go) from a competitor presents an opportunity to get intel on churn risks, upcoming renewals, key points of context, and more.",
+      "why": "Your competitor's ex-employees know where the bodies are buried. They know the roadmap, the churn reasons, and the weaknesses. Don't pitch them—learn from them. 'Congrats on the new role! Would love to hear your thoughts on the [Category] space.' Intelligence goldmine, relationship builder, and potential champion rolled into one.",
       "strength": 2,
       "icon": "fa-user-secret",
       "tools": [
@@ -374,7 +374,7 @@
     },
     {
       "signal": "Ideal persona recently hired",
-      "why": "New employees want to make an impact. When an ideal persona lands at a target account, it's an opportunity to get in the mix of their ideal tech stack.",
+      "why": "New hires in your ICP role (Head of Sales, CMO, VP Eng) are building their toolstack from scratch. They're not loyal to old vendors—they're loyal to what works. The first 60 days are your shot: 'Welcome to [Company]! We help [Role] achieve [Outcome]. Would love to share how.' Early relationships = embedded solutions.",
       "strength": 1,
       "icon": "fa-user-plus",
       "tools": [
@@ -386,7 +386,7 @@
     },
     {
       "signal": "Podcast guest appearance",
-      "why": "So the economic buyer at a target account was just featured on a podcast? Seems like a good trigger to send a congrats and show you're a fan.",
+      "why": "Podcast guests are thought leaders with platforms—and egos (in a good way). They're trying to build authority, and you can help amplify it: 'Loved your episode on [Podcast]. We work with [Similar Guests]—let's chat about [Topic].' You're flattering their expertise while opening a door. Works like magic.",
       "strength": 1,
       "icon": "fa-microphone",
       "tools": [
@@ -397,7 +397,7 @@
     },
     {
       "signal": "Social post",
-      "why": "Follow key people at target accounts on social channels. When they post, like it, engage in the convo, and help amplify. It keeps you top of mind and increases the chances of getting that intro call booked.",
+      "why": "LinkedIn posts revealing pain points are invitations to help. 'Anyone know a good [tool category]?' is a buying signal in plain sight. Comment with value (not a pitch), then DM: 'Saw your post about [Pain]. Happy to share what worked for [Similar Company].' Social selling isn't dead—it's just less spammy now.",
       "strength": 1,
       "icon": "fa-share-alt",
       "tools": [
@@ -409,7 +409,7 @@
     },
     {
       "signal": "Customer/prospect promotion",
-      "why": "Not all job change prospects move organizations. When a customer or ideal prospect gets a promotion, it's often a sign that the team is growing, they'll have additional budget, and that they'll be looking to make a fast impact.",
+      "why": "Promotions = new responsibilities + new budgets + 'quick wins' pressure. A promoted AE becoming a sales manager needs team tools. A promoted marketer needs scale solutions. Message: 'Congrats on the promotion! Companies often need [Tool Category] when moving from IC to manager. Let's chat?' You're solving their new problem before they Google it.",
       "strength": 1,
       "icon": "fa-level-up-alt",
       "tools": [
@@ -421,7 +421,7 @@
     },
     {
       "signal": "Personal milestone",
-      "why": "Like professional milestones, personal wins like an alma mater sports championship, birthday, vacation, etc. are sometimes made public. When the occasion calls for it, it's a chance to show you're paying attention and stand out from the pack.",
+      "why": "Marathons, new babies, home purchases—life events make people human. And humans do business with humans. A quick 'Congrats on [Milestone]!' builds rapport without asking for anything. When you DO have something to offer later, you're not a stranger—you're the person who remembered. Long game, high ROI.",
       "strength": 1,
       "icon": "fa-birthday-cake",
       "tools": [
@@ -643,7 +643,7 @@
   "product": [
     {
       "signal": "Pricing page activity",
-      "why": "Visits to the pricing page—especially when those visits have a lot of toggling and activity—are often a signal of purchase consideration.",
+      "why": "Pricing page visits are the digital equivalent of asking 'How much?' in a store. They're past awareness—they're evaluating fit. If they visit pricing 3+ times without converting, something's blocking them (sticker shock, unclear value, wrong tier). Proactive outreach: 'Saw you checking out pricing. What questions can I answer?' Close the gap before they ghost.",
       "strength": 2,
       "icon": "fa-dollar-sign",
       "tools": [
@@ -654,7 +654,7 @@
     },
     {
       "signal": "Surge in product usage",
-      "why": "Spikes in product usage over a short period of time indicate rapid product adoption (or an organization running a proof of concept). It's worth looking into.",
+      "why": "Usage spikes = expansion signals. More users, more features, more sessions = they're getting value. This is the perfect time for upsells: 'Love seeing your team crush it with [Feature]. Ready to unlock [Advanced Feature]?' Strike when satisfaction is high, not when renewal is near. Happy users convert 2x faster.",
       "strength": 3,
       "icon": "fa-chart-line",
       "tools": [
@@ -665,7 +665,7 @@
     },
     {
       "signal": "Compliance or IT user identification",
-      "why": "While compliance and IT users are not typically economic buyers or champions, they're tasked with making sure products meet security and cost benchmarks. This is usually a strong buying signal.",
+      "why": "When IT or compliance logs in, purchasing is happening. They're not browsing—they're vetting. Security questionnaires, SSO setup requests, and integration checks = deal in motion. Fast-track them: 'Saw your IT team jumped in. Here's our compliance docs, SOC 2, and integration guides.' Remove friction = close faster.",
       "strength": 3,
       "icon": "fa-shield-alt",
       "tools": [
@@ -676,7 +676,7 @@
     },
     {
       "signal": "Rapid rise and fall in product usage",
-      "why": "A common enterprise product selection tactic is to run a high-scale test (think connecting a streaming data workload) to assess product performance and UX. You might be getting evaluated.",
+      "why": "Usage that spikes then dies = failed activation or unmet expectations. This is the 'almost churned' stage. Reach out FAST: 'Noticed usage dropped after [Event]. What went wrong?' Sometimes it's a simple fix (bad onboarding, missing feature). Other times, it's a lost cause. Either way, knowing saves you from surprise churn.",
       "strength": 2,
       "icon": "fa-wave-square",
       "tools": [
@@ -687,7 +687,7 @@
     },
     {
       "signal": "Multiple workspaces created by single org",
-      "why": "When there are multiple sign-ups from different departments as the same organization, it's a sign to follow up on a potential consolidation or upsell.",
+      "why": "Multiple workspaces = either confusion or expansion. If it's confusion ('HR made a workspace, Sales made another'), consolidate them fast. If it's expansion ('Each region wants a workspace'), upsell them on an enterprise plan. Either way, multiple touchpoints = multiple stakeholders = bigger deal. Track and engage.",
       "strength": 3,
       "icon": "fa-sitemap",
       "tools": [
