@@ -23,77 +23,196 @@
         }
         
         body {
-            background: linear-gradient(180deg, #FBFBFB 0%, #E6EAF4 100%);
+            background: #FAFBFC;
             color: var(--text-dark);
         }
         
+        /* === GLASSMORPHISM HEADER === */
         .lemlist-gradient {
-            background: linear-gradient(135deg, #255DEC 0%, #318BFF 100%);
+            background: linear-gradient(135deg, #255DEC 0%, #318BFF 50%, #255DEC 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 8s ease infinite;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        /* === LOGO HOVER EFFECTS === */
+        header .text-2xl {
+            transition: all 0.3s ease;
+        }
+        
+        header .text-2xl:hover {
+            transform: scale(1.05);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        
+        /* === IMPROVED SIGNAL CARDS === */
         .trigger-card {
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid #f0f0f0;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
             height: 100%;
             display: flex;
             flex-direction: column;
-            padding: 24px;
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .trigger-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #318BFF, #FFD666);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .trigger-card:hover::before {
+            transform: scaleX(1);
         }
         
         .trigger-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 32px rgba(49, 139, 255, 0.15);
-            border-color: var(--lemlist-blue);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(49, 139, 255, 0.15);
+            border-color: rgba(49, 139, 255, 0.3);
+        }
+        
+        /* === ICON WRAPPER === */
+        .icon-wrapper {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(49, 139, 255, 0.1), rgba(49, 139, 255, 0.05));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            margin-right: 16px;
+        }
+        
+        .trigger-card:hover .icon-wrapper {
+            background: linear-gradient(135deg, rgba(49, 139, 255, 0.2), rgba(49, 139, 255, 0.1));
+            transform: rotate(-5deg) scale(1.1);
+        }
+        
+        .icon-wrapper i {
+            font-size: 24px;
+            color: var(--lemlist-blue);
+        }
+        
+        /* === IMPROVED TABS === */
+        .tab-container {
+            position: relative;
+            background: white;
+            padding: 6px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
         
         .tab-button {
             transition: all 0.3s ease;
-            border-radius: 16px;
+            border-radius: 14px;
             font-weight: 600;
-            padding: 14px 28px;
-            border: 2px solid transparent;
+            padding: 14px 24px;
+            border: none;
             font-size: 15px;
+            position: relative;
+            z-index: 1;
         }
         
         .tab-button.active {
             background: linear-gradient(135deg, #318BFF 0%, #255DEC 100%);
             color: white;
-            border-color: transparent;
-            box-shadow: 0 4px 12px rgba(49, 139, 255, 0.3);
+            box-shadow: 0 4px 12px rgba(49, 139, 255, 0.4);
         }
         
         .tab-button:not(.active) {
-            background-color: white;
+            background-color: transparent;
             color: #1f2937;
-            border-color: #e5e7eb;
         }
         
         .tab-button:hover:not(.active) {
-            background-color: #E3F3FF;
+            background-color: rgba(49, 139, 255, 0.05);
             color: #143CDD;
-            border-color: #318BFF;
+            transform: translateY(-2px);
         }
         
+        .badge-count {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            margin-left: 6px;
+            font-weight: 700;
+        }
+        
+        .tab-button:not(.active) .badge-count {
+            background: rgba(49, 139, 255, 0.1);
+            color: var(--lemlist-blue);
+        }
+        
+        /* === IMPROVED BUTTONS === */
         .cta-primary {
             background: linear-gradient(135deg, #318BFF 0%, #255DEC 100%);
             color: white;
             transition: all 0.3s ease;
-            border-radius: 16px;
+            border-radius: 999px;
             padding: 18px 36px;
             font-weight: 700;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             text-decoration: none;
             font-size: 16px;
-            box-shadow: 0 4px 12px rgba(49, 139, 255, 0.3);
+            box-shadow: 
+                0 4px 12px rgba(49, 139, 255, 0.3),
+                0 1px 3px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s ease;
+        }
+        
+        .cta-primary:hover::before {
+            left: 100%;
         }
         
         .cta-primary:hover {
             background: linear-gradient(135deg, #255DEC 0%, #143CDD 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(49, 139, 255, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 
+                0 8px 24px rgba(49, 139, 255, 0.4),
+                0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-primary:hover .cta-arrow {
+            transform: translateX(4px);
         }
         
         .cta-secondary {
@@ -101,25 +220,36 @@
             color: var(--lemlist-blue);
             border: 2px solid var(--lemlist-blue);
             transition: all 0.3s ease;
-            border-radius: 16px;
+            border-radius: 999px;
             padding: 16px 32px;
             font-weight: 700;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             text-decoration: none;
             font-size: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
         
         .cta-secondary:hover {
             background: var(--lemlist-light);
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(49, 139, 255, 0.15);
         }
         
+        /* === TOOL TAGS === */
         .tool-tag {
-            padding: 4px 10px;
-            border-radius: 6px;
+            padding: 6px 12px;
+            border-radius: 8px;
             font-size: 11px;
             font-weight: 600;
             display: inline-block;
+            transition: all 0.2s ease;
+        }
+        
+        .tool-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         
         .lemlist-tool {
@@ -141,37 +271,171 @@
             display: none !important;
         }
         
+        /* === BADGES === */
         .intent-badge {
             background: linear-gradient(135deg, #FFD666 0%, #FFAB00 100%);
             color: var(--text-dark);
-            padding: 4px 10px;
-            border-radius: 6px;
+            padding: 6px 12px;
+            border-radius: 8px;
             font-size: 10px;
             font-weight: 700;
             text-transform: uppercase;
             display: inline-block;
+            box-shadow: 0 2px 8px rgba(255, 214, 102, 0.3);
         }
         
         .strength-badge {
-            font-size: 14px;
+            font-size: 18px;
+            background: rgba(255, 214, 102, 0.15);
+            padding: 8px 12px;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 214, 102, 0.3);
         }
         
         .collab-badge {
             background: var(--lemlist-yellow);
             color: var(--text-dark);
-            padding: 6px 16px;
-            border-radius: 20px;
+            padding: 8px 20px;
+            border-radius: 999px;
             font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(255, 214, 102, 0.3);
+            animation: pulse 2s ease-in-out infinite;
         }
         
-        .section-divider {
-            height: 2px;
-            background: linear-gradient(90deg, #318BFF 0%, #FFD666 100%);
-            margin: 60px 0;
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
+        
+        /* === SECTION DIVIDER === */
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(90deg, #318BFF 0%, #FFD666 100%);
+            margin: 80px 0;
+            border-radius: 999px;
+        }
+        
+        /* === SCROLL ANIMATIONS === */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* === BACKGROUND PATTERNS === */
+        .pattern-dots {
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        
+        /* === TRUST BADGES === */
+        .trust-line {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 16px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .trust-line span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        /* === STATS BAR === */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            margin: 24px auto;
+            max-width: 600px;
+            flex-wrap: wrap;
+        }
+        
+        .stats-bar .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        
+        /* === LEMLIST-STYLE CARDS === */
+        .lemlist-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .lemlist-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+        }
+        
+        /* === STEP CARDS === */
+        .step-card {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--step-color), transparent);
+            opacity: 0.5;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .step-number {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--step-color), var(--step-color-light));
+            color: white;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .step-1 { --step-color: #318BFF; --step-color-light: #5BA3FF; }
+        .step-2 { --step-color: #9333EA; --step-color-light: #A855F7; }
+        .step-3 { --step-color: #F59E0B; --step-color-light: #FBBF24; }
+        .step-4 { --step-color: #10B981; --step-color-light: #34D399; }
         
         @media (max-width: 768px) {
             .tab-button {
@@ -180,7 +444,15 @@
             }
             
             .trigger-card {
-                padding: 16px !important;
+                padding: 20px !important;
+            }
+            
+            .stats-bar {
+                gap: 16px;
+            }
+            
+            .step-card {
+                padding: 24px;
             }
         }
     </style>
@@ -207,12 +479,29 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="lemlist-gradient text-white py-20">
+    <section class="lemlist-gradient pattern-dots text-white py-20">
         <div class="container mx-auto px-4 text-center">
             <div class="max-w-4xl mx-auto">
                 <div class="mb-4">
                     <span class="collab-badge">Exclusive Collaboration</span>
                 </div>
+                
+                <!-- Stats Bar -->
+                <div class="stats-bar fade-in-up">
+                    <div class="stat-item">
+                        <span>💎</span>
+                        <span>95 Signals</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>📊</span>
+                        <span>3x Response Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>⚡</span>
+                        <span>10 Min Setup</span>
+                    </div>
+                </div>
+                
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                     95+ Buying Signals to Reach Prospects at the Perfect Moment
                 </h1>
@@ -221,15 +510,22 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="https://www.lemlist.com/en/ads/contact-lemlist?utm_source=salescraft&utm_medium=collaboration&utm_campaign=100_buying_signals" target="_blank" class="cta-primary">
-                        🚀 Start 14-Day Free Trial
+                        <span>🚀 Start 14-Day Free Trial</span>
+                        <span class="cta-arrow">→</span>
                     </a>
                     <a href="https://calendly.com/ali-salescraft/30min" target="_blank" class="cta-secondary">
-                        📅 Book a Call with Ali
+                        <span>📅 Book a Call with Ali</span>
                     </a>
                 </div>
-                <p class="text-sm text-blue-200 mt-6">
-                    ✨ Automatic Signal Detection with lemlist Intent
-                </p>
+                
+                <!-- Trust Line -->
+                <div class="trust-line">
+                    <span>✅ No credit card</span>
+                    <span>•</span>
+                    <span>✅ 14-day trial</span>
+                    <span>•</span>
+                    <span>✅ Cancel anytime</span>
+                </div>
             </div>
         </div>
     </section>
@@ -248,24 +544,24 @@
             
             <!-- Tabs -->
             <div class="flex justify-center mb-12 overflow-x-auto">
-                <div class="inline-flex flex-wrap gap-2 bg-white p-3 rounded-2xl shadow-lg">
+                <div class="tab-container inline-flex flex-wrap gap-2">
                     <button class="tab-button active" data-tab="company" onclick="switchTab('company')">
-                        🏢 Company (30)
+                        🏢 Company<span class="badge-count">30</span>
                     </button>
                     <button class="tab-button" data-tab="person" onclick="switchTab('person')">
-                        👤 Person (15)
+                        👤 Person<span class="badge-count">15</span>
                     </button>
                     <button class="tab-button" data-tab="tech" onclick="switchTab('tech')">
-                        💻 Tech (10)
+                        💻 Tech<span class="badge-count">10</span>
                     </button>
                     <button class="tab-button" data-tab="product" onclick="switchTab('product')">
-                        🚀 Product-Led (20)
+                        🚀 Product<span class="badge-count">20</span>
                     </button>
                     <button class="tab-button" data-tab="community" onclick="switchTab('community')">
-                        👥 Community (15)
+                        👥 Community<span class="badge-count">15</span>
                     </button>
                     <button class="tab-button" data-tab="event" onclick="switchTab('event')">
-                        📅 Events (5)
+                        📅 Events<span class="badge-count">5</span>
                     </button>
                 </div>
             </div>
@@ -275,14 +571,16 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     
                     <!-- Stale opportunity -->
-                    <div class="trigger-card">
+                    <div class="trigger-card fade-in-up">
                         <div class="flex items-center justify-between mb-3">
                             <span class="intent-badge">Detectable with lemlist</span>
-                            <div class="strength-badge"><span class="text-red-600 font-bold">🔥🔥🔥</span></div>
+                            <div class="strength-badge"><span class="font-bold">🔥🔥🔥</span></div>
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-bullseye text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Stale opportunity</h3>
                         </div>
                         
@@ -321,7 +619,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-envelope-open text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-envelope-open"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Surge in email opens (internal)</h3>
                         </div>
                         
@@ -360,7 +660,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-balance-scale text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Legislation change</h3>
                         </div>
                         
@@ -400,7 +702,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-exclamation-triangle text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Platform policy change</h3>
                         </div>
                         
@@ -439,7 +743,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-building text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-building"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Competitor close or acquisition</h3>
                         </div>
                         
@@ -479,7 +785,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-user-minus text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-user-minus"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Surge in layoffs</h3>
                         </div>
                         
@@ -519,7 +827,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-star-half-alt text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Negative product review</h3>
                         </div>
                         
@@ -559,7 +869,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-comments text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-comments"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Form or chat flow abandonment</h3>
                         </div>
                         
@@ -598,7 +910,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-ticket-alt text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-ticket-alt"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Support ticket creation</h3>
                         </div>
                         
@@ -637,7 +951,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-newspaper text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Negative media coverage</h3>
                         </div>
                         
@@ -677,7 +993,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-users text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-users"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Surge in hiring</h3>
                         </div>
                         
@@ -717,7 +1035,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-newspaper text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Content consumption</h3>
                         </div>
                         
@@ -757,7 +1077,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-money-bill-wave text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Capital raised/new funding secured</h3>
                         </div>
                         
@@ -797,7 +1119,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-chart-bar text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Earnings call/10-K release</h3>
                         </div>
                         
@@ -836,7 +1160,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-video text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-video"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Webinar participation</h3>
                         </div>
                         
@@ -875,7 +1201,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-user-tie text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
                             <h3 class="text-xl font-bold">New leadership recently hired (CEO, C-level, board)</h3>
                         </div>
                         
@@ -915,7 +1243,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-handshake text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-handshake"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Merger or acquisition</h3>
                         </div>
                         
@@ -955,7 +1285,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-briefcase text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Job opening(s)</h3>
                         </div>
                         
@@ -995,7 +1327,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-award text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-award"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Award or recognition received</h3>
                         </div>
                         
@@ -1035,7 +1369,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-file-alt text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Customer story published (internal)</h3>
                         </div>
                         
@@ -1074,7 +1410,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-globe text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-globe"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Region expansion</h3>
                         </div>
                         
@@ -1113,7 +1451,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-clock text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-clock"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Offer expiration (internal)</h3>
                         </div>
                         
@@ -1152,7 +1492,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-exclamation-circle text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Prospect or customer email bounce (internal)</h3>
                         </div>
                         
@@ -1192,7 +1534,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-trophy text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-trophy"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Professional milestone</h3>
                         </div>
                         
@@ -1232,7 +1576,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-newspaper text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Positive media coverage</h3>
                         </div>
                         
@@ -1272,7 +1618,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-book text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-book"></i>
+                            </div>
                             <h3 class="text-xl font-bold">New customer story published</h3>
                         </div>
                         
@@ -1311,7 +1659,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-file-contract text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Contract renewal approaching</h3>
                         </div>
                         
@@ -1350,7 +1700,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-microphone text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-microphone"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Executive mentions problem in interview</h3>
                         </div>
                         
@@ -1390,7 +1742,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-calendar-check text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Quarterly business review scheduled</h3>
                         </div>
                         
@@ -1429,7 +1783,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-building text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-building"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Office relocation or expansion</h3>
                         </div>
                         
@@ -1474,7 +1830,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-briefcase text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Customer/champion job change</h3>
                         </div>
                         
@@ -1514,7 +1872,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-user-secret text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-user-secret"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Competitor job change</h3>
                         </div>
                         
@@ -1554,7 +1914,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-user-plus text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Ideal persona recently hired</h3>
                         </div>
                         
@@ -1594,7 +1956,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-microphone text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-microphone"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Podcast guest appearance</h3>
                         </div>
                         
@@ -1633,7 +1997,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-share-alt text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Social post</h3>
                         </div>
                         
@@ -1673,7 +2039,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-level-up-alt text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-level-up-alt"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Customer/prospect promotion</h3>
                         </div>
                         
@@ -1713,7 +2081,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-birthday-cake text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-birthday-cake"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Personal milestone</h3>
                         </div>
                         
@@ -1753,7 +2123,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-presentation text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-presentation"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Speaking at conference</h3>
                         </div>
                         
@@ -1792,7 +2164,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-pen text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-pen"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Published article or thought leadership</h3>
                         </div>
                         
@@ -1832,7 +2206,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-user-edit text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-user-edit"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Changed profile description</h3>
                         </div>
                         
@@ -1871,7 +2247,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-users-cog text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Joined professional group or association</h3>
                         </div>
                         
@@ -1910,7 +2288,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-graduation-cap text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Certification or course completion</h3>
                         </div>
                         
@@ -1949,7 +2329,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-calendar text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-calendar"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Attended industry event</h3>
                         </div>
                         
@@ -1988,7 +2370,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-play-circle text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Requested demo or trial</h3>
                         </div>
                         
@@ -2027,7 +2411,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-download text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-download"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Downloaded gated content</h3>
                         </div>
                         
@@ -2072,7 +2458,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-layer-group text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Tech stack adjacency</h3>
                         </div>
                         
@@ -2113,7 +2501,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-code-branch text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Competitor feature deprecation</h3>
                         </div>
                         
@@ -2152,7 +2542,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-plug text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-plug"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Integration removal (external)</h3>
                         </div>
                         
@@ -2191,7 +2583,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-code text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-code"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Website technology change</h3>
                         </div>
                         
@@ -2231,7 +2625,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-chart-line text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Analytics tag added to website</h3>
                         </div>
                         
@@ -2271,7 +2667,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-ad text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-ad"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Advertising tracking tag added to website</h3>
                         </div>
                         
@@ -2311,7 +2709,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-sync text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-sync"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Website relaunch</h3>
                         </div>
                         
@@ -2351,7 +2751,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-rocket text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-rocket"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Product or feature launch (external)</h3>
                         </div>
                         
@@ -2390,7 +2792,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-traffic-light text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-traffic-light"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Surge or decline in website traffic</h3>
                         </div>
                         
@@ -2430,7 +2834,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-mobile-alt text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Mobile app launched</h3>
                         </div>
                         
@@ -2475,7 +2881,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-dollar-sign text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Pricing page activity</h3>
                         </div>
                         
@@ -2514,7 +2922,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-chart-line text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Surge in product usage</h3>
                         </div>
                         
@@ -2553,7 +2963,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-shield-alt text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Compliance or IT user identification</h3>
                         </div>
                         
@@ -2592,7 +3004,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-wave-square text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-wave-square"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Rapid rise and fall in product usage</h3>
                         </div>
                         
@@ -2631,7 +3045,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-sitemap text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-sitemap"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Multiple workspaces created by single org</h3>
                         </div>
                         
@@ -2670,7 +3086,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-lightbulb text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Feature request submitted</h3>
                         </div>
                         
@@ -2709,7 +3127,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-hourglass-half text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-hourglass-half"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Trial extension requested</h3>
                         </div>
                         
@@ -2748,7 +3168,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-book text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-book"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Documentation page views</h3>
                         </div>
                         
@@ -2787,7 +3209,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-video text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-video"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Product video watched</h3>
                         </div>
                         
@@ -2826,7 +3250,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-balance-scale-right text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-balance-scale-right"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Competitor comparison page visited</h3>
                         </div>
                         
@@ -2865,7 +3291,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-file-alt text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Case study page visited</h3>
                         </div>
                         
@@ -2904,7 +3332,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-calculator text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-calculator"></i>
+                            </div>
                             <h3 class="text-xl font-bold">ROI calculator used</h3>
                         </div>
                         
@@ -2943,7 +3373,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-plug text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-plug"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Integrations page visited</h3>
                         </div>
                         
@@ -2982,7 +3414,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-lock text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-lock"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Security page visited</h3>
                         </div>
                         
@@ -3021,7 +3455,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-user-plus text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Shared account with colleague</h3>
                         </div>
                         
@@ -3060,7 +3496,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-file-export text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-file-export"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Export data action</h3>
                         </div>
                         
@@ -3099,7 +3537,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-key text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-key"></i>
+                            </div>
                             <h3 class="text-xl font-bold">API key generated</h3>
                         </div>
                         
@@ -3138,7 +3578,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-shopping-cart text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Abandoned shopping cart</h3>
                         </div>
                         
@@ -3177,7 +3619,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-question-circle text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Support article viewed repeatedly</h3>
                         </div>
                         
@@ -3216,7 +3660,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-frown text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-frown"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Negative NPS score</h3>
                         </div>
                         
@@ -3261,7 +3707,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-comments text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-comments"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Active in online community</h3>
                         </div>
                         
@@ -3300,7 +3748,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-question text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-question"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Asked question in community</h3>
                         </div>
                         
@@ -3339,7 +3789,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-comment-dots text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Mentioned pain point in forum</h3>
                         </div>
                         
@@ -3378,7 +3830,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-thumbs-up text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Upvoted feature request</h3>
                         </div>
                         
@@ -3417,7 +3871,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-user-friends text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Joined competitor's community</h3>
                         </div>
                         
@@ -3456,7 +3912,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-share text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-share"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Shared competitor content</h3>
                         </div>
                         
@@ -3495,7 +3953,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-comment-alt text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-comment-alt"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Commented on industry blog</h3>
                         </div>
                         
@@ -3534,7 +3994,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-star text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-star"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Reviewed competitor on G2</h3>
                         </div>
                         
@@ -3574,7 +4036,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-users text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-users"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Attended competitor user conference</h3>
                         </div>
                         
@@ -3613,7 +4077,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-retweet text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-retweet"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Retweeted industry influencer</h3>
                         </div>
                         
@@ -3652,7 +4118,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-envelope text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-envelope"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Subscribed to competitor newsletter</h3>
                         </div>
                         
@@ -3691,7 +4159,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-user-check text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-user-check"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Followed competitor on social</h3>
                         </div>
                         
@@ -3731,7 +4201,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-file-download text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-file-download"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Downloaded competitor content</h3>
                         </div>
                         
@@ -3770,7 +4242,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-presentation text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-presentation"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Participated in competitor webinar</h3>
                         </div>
                         
@@ -3809,7 +4283,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-at text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-at"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Mentioned in online discussion</h3>
                         </div>
                         
@@ -3854,7 +4330,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-ticket-alt text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-ticket-alt"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Registered for industry event</h3>
                         </div>
                         
@@ -3893,7 +4371,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-microphone-alt text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-microphone-alt"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Speaking at conference</h3>
                         </div>
                         
@@ -3932,7 +4412,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-handshake text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-handshake"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Sponsored event</h3>
                         </div>
                         
@@ -3971,7 +4453,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-calendar-alt text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Hosting event or webinar</h3>
                         </div>
                         
@@ -4010,7 +4494,9 @@
                         </div>
                         
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-store text-3xl mr-3 text-blue-600"></i>
+                            <div class="icon-wrapper">
+                                <i class="fas fa-store"></i>
+                            </div>
                             <h3 class="text-xl font-bold">Booth at trade show</h3>
                         </div>
                         
@@ -4062,7 +4548,8 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="https://www.lemlist.com/en/ads/contact-lemlist?utm_source=salescraft&utm_medium=collaboration&utm_campaign=intent_feature" target="_blank" class="cta-primary">
-                        ✨ Explore lemlist Intent
+                        <span>✨ Explore lemlist Intent</span>
+                        <span class="cta-arrow">→</span>
                     </a>
                 </div>
             </div>
@@ -4255,146 +4742,185 @@
 
     <div class="section-divider"></div>
 
-    <!-- Quick Start Guide Section -->
-    <section class="py-16 bg-gray-50">
+    <!-- Quick Start Guide Section - lemlist Style -->
+    <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
                     🚀 Quick Start Guide
                 </h2>
-                <p class="text-lg text-gray-600">
+                <p class="text-xl text-gray-600">
                     From 95 signals to your first win in 4 simple steps
                 </p>
             </div>
             
-            <div class="max-w-5xl mx-auto space-y-6">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Step 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-blue-600">
-                    <div class="flex items-start gap-6">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-                                1
-                            </div>
-                        </div>
+                <div class="step-card step-1 fade-in-up">
+                    <div class="flex items-start gap-6 mb-6">
+                        <div class="step-number">1</div>
                         <div class="flex-1">
-                            <h3 class="text-2xl font-bold mb-3 text-gray-900">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">
                                 Select Your First 5 Signals
                             </h3>
-                            <p class="text-gray-600 mb-4">
+                            <p class="text-gray-600">
                                 Don't try to use all 95 at once. Start small and scale what works.
                             </p>
-                            <div class="bg-blue-50 p-4 rounded-lg">
-                                <p class="text-sm text-gray-700 mb-2"><strong>💡 Pro Tip:</strong></p>
-                                <ul class="text-sm text-gray-700 space-y-1 ml-4">
-                                    <li>• Pick 3 "Company" signals that match your ICP</li>
-                                    <li>• Add 2 "Person" signals (job changes work great)</li>
-                                    <li>• Focus on high-strength signals (🔥🔥🔥) first</li>
-                                </ul>
-                            </div>
-                            <p class="text-sm text-gray-500 mt-3">⏱️ Time: 10 minutes</p>
                         </div>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-xl mb-4">
+                        <p class="text-sm font-semibold text-gray-900 mb-3">💡 Pro Tips</p>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">→</span>
+                                <span>Pick 3 "Company" signals that match your ICP</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">→</span>
+                                <span>Add 2 "Person" signals (job changes work great)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">→</span>
+                                <span>Focus on high-strength signals (🔥🔥🔥) first</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <span class="mr-2">⏱️</span>
+                        <span>Time: 10 minutes</span>
                     </div>
                 </div>
 
                 <!-- Step 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-purple-600">
-                    <div class="flex items-start gap-6">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-                                2
-                            </div>
-                        </div>
+                <div class="step-card step-2 fade-in-up">
+                    <div class="flex items-start gap-6 mb-6">
+                        <div class="step-number">2</div>
                         <div class="flex-1">
-                            <h3 class="text-2xl font-bold mb-3 text-gray-900">
-                                Configure Signal Detection
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">
+                                Configure Detection
                             </h3>
-                            <p class="text-gray-600 mb-4">
-                                Set up lemlist Intent to automatically detect these signals and alert you in real-time.
+                            <p class="text-gray-600">
+                                Set up lemlist Intent to automatically detect signals and alert you in real-time.
                             </p>
-                            <div class="bg-purple-50 p-4 rounded-lg">
-                                <p class="text-sm text-gray-700 mb-2"><strong>🎯 What to do:</strong></p>
-                                <ul class="text-sm text-gray-700 space-y-1 ml-4">
-                                    <li>• Connect lemlist Intent to your target account list</li>
-                                    <li>• Enable alerts for your 5 chosen signals</li>
-                                    <li>• Test with 2-3 accounts to verify detection works</li>
-                                </ul>
-                            </div>
-                            <p class="text-sm text-gray-500 mt-3">⏱️ Time: 15 minutes</p>
                         </div>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-xl mb-4">
+                        <p class="text-sm font-semibold text-gray-900 mb-3">🎯 What to do</p>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">→</span>
+                                <span>Connect lemlist Intent to your target account list</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">→</span>
+                                <span>Enable alerts for your 5 chosen signals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-600 mr-2">→</span>
+                                <span>Test with 2-3 accounts to verify detection works</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <span class="mr-2">⏱️</span>
+                        <span>Time: 15 minutes</span>
                     </div>
                 </div>
 
                 <!-- Step 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-yellow-600">
-                    <div class="flex items-start gap-6">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 bg-yellow-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-                                3
-                            </div>
-                        </div>
+                <div class="step-card step-3 fade-in-up">
+                    <div class="flex items-start gap-6 mb-6">
+                        <div class="step-number">3</div>
                         <div class="flex-1">
-                            <h3 class="text-2xl font-bold mb-3 text-gray-900">
-                                Customize Your Templates
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">
+                                Customize Templates
                             </h3>
-                            <p class="text-gray-600 mb-4">
-                                Take our ready-to-use templates and adapt them to your brand voice and value prop.
+                            <p class="text-gray-600">
+                                Adapt our templates to your brand voice and value proposition.
                             </p>
-                            <div class="bg-yellow-50 p-4 rounded-lg">
-                                <p class="text-sm text-gray-700 mb-2"><strong>✍️ Customization tips:</strong></p>
-                                <ul class="text-sm text-gray-700 space-y-1 ml-4">
-                                    <li>• Replace [placeholders] with your product/company specifics</li>
-                                    <li>• Add your unique value proposition</li>
-                                    <li>• Keep it short (under 100 words)</li>
-                                    <li>• Create 1 sequence per signal type in lemlist</li>
-                                </ul>
-                            </div>
-                            <p class="text-sm text-gray-500 mt-3">⏱️ Time: 20 minutes</p>
                         </div>
+                    </div>
+                    <div class="bg-yellow-50 p-6 rounded-xl mb-4">
+                        <p class="text-sm font-semibold text-gray-900 mb-3">✍️ Customization tips</p>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-yellow-600 mr-2">→</span>
+                                <span>Replace [placeholders] with your product specifics</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-600 mr-2">→</span>
+                                <span>Add your unique value proposition</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-600 mr-2">→</span>
+                                <span>Keep it short (under 100 words)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-600 mr-2">→</span>
+                                <span>Create 1 sequence per signal type in lemlist</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <span class="mr-2">⏱️</span>
+                        <span>Time: 20 minutes</span>
                     </div>
                 </div>
 
                 <!-- Step 4 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-green-600">
-                    <div class="flex items-start gap-6">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-                                4
-                            </div>
-                        </div>
+                <div class="step-card step-4 fade-in-up">
+                    <div class="flex items-start gap-6 mb-6">
+                        <div class="step-number">4</div>
                         <div class="flex-1">
-                            <h3 class="text-2xl font-bold mb-3 text-gray-900">
-                                Launch, Measure & Optimize
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">
+                                Launch & Optimize
                             </h3>
-                            <p class="text-gray-600 mb-4">
-                                Start with a small batch, track results, and double down on what converts.
+                            <p class="text-gray-600">
+                                Start small, track results, and double down on what converts.
                             </p>
-                            <div class="bg-green-50 p-4 rounded-lg">
-                                <p class="text-sm text-gray-700 mb-2"><strong>📊 Key metrics to track:</strong></p>
-                                <ul class="text-sm text-gray-700 space-y-1 ml-4">
-                                    <li>• Open rate by signal type</li>
-                                    <li>• Response rate per template</li>
-                                    <li>• Meetings booked per signal</li>
-                                    <li>• Signal-to-opportunity conversion rate</li>
-                                </ul>
-                            </div>
-                            <div class="mt-4 p-4 bg-gradient-to-r from-green-100 to-blue-100 rounded-lg">
-                                <p class="text-sm font-semibold text-gray-900">🎯 Success Target:</p>
-                                <p class="text-sm text-gray-700">After 2 weeks, you should see 2-3x higher response rates compared to cold outreach. If a signal isn't performing, swap it for another one from the 95!</p>
-                            </div>
-                            <p class="text-sm text-gray-500 mt-3">⏱️ Time: Ongoing</p>
                         </div>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-xl mb-4">
+                        <p class="text-sm font-semibold text-gray-900 mb-3">📊 Key metrics</p>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">→</span>
+                                <span>Open rate by signal type</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">→</span>
+                                <span>Response rate per template</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">→</span>
+                                <span>Meetings booked per signal</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">→</span>
+                                <span>Signal-to-opportunity conversion</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-xl mb-4">
+                        <p class="text-sm font-semibold text-gray-900 mb-1">🎯 Success Target</p>
+                        <p class="text-sm text-gray-700">After 2 weeks, expect 2-3x higher response rates vs cold outreach. Not performing? Swap for another signal!</p>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <span class="mr-2">⏱️</span>
+                        <span>Time: Ongoing</span>
                     </div>
                 </div>
             </div>
 
             <!-- Bottom CTA -->
-            <div class="text-center mt-12">
-                <div class="inline-block bg-blue-50 px-8 py-6 rounded-2xl border-2 border-blue-200">
-                    <p class="text-lg font-semibold text-gray-900 mb-3">
+            <div class="text-center mt-16">
+                <div class="lemlist-card max-w-2xl mx-auto text-center">
+                    <p class="text-2xl font-bold text-gray-900 mb-4">
                         ⚡ Ready to get started in the next hour?
                     </p>
                     <a href="https://www.lemlist.com/en/ads/contact-lemlist?utm_source=salescraft&utm_medium=collaboration&utm_campaign=quick_start" target="_blank" class="cta-primary">
-                        Start Free Trial Now
+                        <span>Start Free Trial Now</span>
+                        <span class="cta-arrow">→</span>
                     </a>
                 </div>
             </div>
@@ -4648,10 +5174,11 @@
                 <p class="text-gray-600 mb-4">Still have questions?</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="https://calendly.com/ali-salescraft/30min" target="_blank" class="cta-primary">
-                        📅 Book a Call with Ali
+                        <span>📅 Book a Call with Ali</span>
+                        <span class="cta-arrow">→</span>
                     </a>
                     <a href="https://www.lemlist.com/en/ads/contact-lemlist?utm_source=salescraft&utm_medium=collaboration&utm_campaign=faq" target="_blank" class="cta-secondary">
-                        💬 Contact lemlist Support
+                        <span>💬 Contact lemlist Support</span>
                     </a>
                 </div>
             </div>
@@ -4671,10 +5198,11 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href="https://www.lemlist.com/en/ads/contact-lemlist?utm_source=salescraft&utm_medium=collaboration&utm_campaign=final_cta" target="_blank" class="cta-primary">
-                    🚀 Try lemlist Free
+                    <span>🚀 Try lemlist Free</span>
+                    <span class="cta-arrow">→</span>
                 </a>
                 <a href="https://calendly.com/ali-salescraft/30min" target="_blank" class="cta-secondary">
-                    📅 Talk to an Expert
+                    <span>📅 Talk to an Expert</span>
                 </a>
             </div>
         </div>
@@ -4751,13 +5279,22 @@
             });
         }, observerOptions);
         
-        // Animate trigger cards on load
+        // Animate elements on scroll
         document.addEventListener('DOMContentLoaded', () => {
+            // Animate trigger cards
             document.querySelectorAll('.trigger-card').forEach(card => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
                 card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(card);
+            });
+            
+            // Animate fade-in-up elements (step cards, hero elements, etc.)
+            document.querySelectorAll('.fade-in-up').forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(element);
             });
         });
     </script>
