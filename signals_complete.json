@@ -6,7 +6,7 @@
       "strength": 3,
       "icon": "fa-bullseye",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], I noticed we spoke [X months] ago about [topic]. Since then, we've added [new feature] that addresses [pain point]. Worth a quick chat?",
       "example": "6-month old opportunity → New feature launched → Re-engage with value add"
@@ -17,7 +17,7 @@
       "strength": 3,
       "icon": "fa-envelope-open",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], I see there's growing interest in [solution]. Who else should I loop in to discuss how this helps [objective]?",
       "example": "Email opened 8 times → Multiple stakeholders → Expand conversation"
@@ -28,7 +28,6 @@
       "strength": 3,
       "icon": "fa-balance-scale",
       "tools": [
-        "lemlist Intent",
         "Google Alerts"
       ],
       "template": "Hi [FirstName], with [new regulation] taking effect, companies in [industry] need to adapt. Here's how [solution] ensures compliance...",
@@ -40,7 +39,7 @@
       "strength": 3,
       "icon": "fa-exclamation-triangle",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], [Platform] just changed [policy]. Companies using [old method] are at risk. Here's how to adapt...",
       "example": "Gmail sender requirements → Email deliverability tools → Urgent need"
@@ -51,7 +50,6 @@
       "strength": 3,
       "icon": "fa-building",
       "tools": [
-        "lemlist Intent",
         "Crunchbase"
       ],
       "template": "Hi [FirstName], I know you were using [competitor]. With their recent [acquisition/closure], we're helping former users transition to [solution].",
@@ -63,7 +61,6 @@
       "strength": 2,
       "icon": "fa-user-minus",
       "tools": [
-        "lemlist Intent",
         "LinkedIn"
       ],
       "template": "[FirstName], restructuring often means doing more with less. [Solution] helps automate [function] without adding headcount.",
@@ -75,7 +72,6 @@
       "strength": 2,
       "icon": "fa-star-half-alt",
       "tools": [
-        "lemlist Intent",
         "G2"
       ],
       "template": "Hi [FirstName], I noticed concerns about [competitor]'s [limitation]. We built [solution] specifically to address this. Here's how...",
@@ -87,7 +83,7 @@
       "strength": 2,
       "icon": "fa-comments",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], I noticed you started exploring [solution] but didn't finish. What questions can I answer to help you evaluate?",
       "example": "Demo form 80% complete → Follow-up within 1 hour → Higher completion rate"
@@ -98,7 +94,7 @@
       "strength": 2,
       "icon": "fa-ticket-alt",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "Hi [FirstName], I saw you reached out about [issue]. This is exactly what [solution] was designed to solve. Quick call?",
       "example": "Support ticket about integration → Your product has that integration → Sales opportunity"
@@ -109,7 +105,6 @@
       "strength": 2,
       "icon": "fa-newspaper",
       "tools": [
-        "lemlist Intent",
         "Google Alerts"
       ],
       "template": "[FirstName], challenging times often require new approaches. [Solution] helps companies in similar situations by [benefit].",
@@ -133,7 +128,6 @@
       "strength": 1,
       "icon": "fa-newspaper",
       "tools": [
-        "lemlist Intent",
         "Google Analytics"
       ],
       "template": "Hi [FirstName], I noticed you've been reading about [topic]. Thought you'd find [resource] helpful as you evaluate [solution].",
@@ -157,7 +151,7 @@
       "strength": 1,
       "icon": "fa-chart-bar",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], I noticed [initiative] mentioned in your recent earnings call. [Solution] helps companies execute on this by...",
       "example": "Earnings call mentions AI investment → AI tools → Relevant timing"
@@ -168,7 +162,7 @@
       "strength": 1,
       "icon": "fa-video",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "Hi [FirstName], thanks for joining our webinar on [topic]. What questions can I answer as you evaluate [solution]?",
       "example": "Attended product webinar → Asked questions → High intent for demo"
@@ -179,7 +173,6 @@
       "strength": 1,
       "icon": "fa-user-tie",
       "tools": [
-        "lemlist Intent",
         "LinkedIn"
       ],
       "template": "Hi [FirstName], congrats on the new [C-level] hire! New leadership often means new initiatives. Here's how [solution] supports...",
@@ -191,7 +184,6 @@
       "strength": 1,
       "icon": "fa-handshake",
       "tools": [
-        "lemlist Intent",
         "Crunchbase"
       ],
       "template": "[FirstName], integrating [acquired company] will require [challenge]. [Solution] helps M&A teams by [benefit].",
@@ -203,7 +195,6 @@
       "strength": 1,
       "icon": "fa-briefcase",
       "tools": [
-        "lemlist Intent",
         "LinkedIn"
       ],
       "template": "[FirstName], I saw you're hiring a [position]. This role typically needs [tool/solution]. Happy to show how [solution] helps...",
@@ -215,7 +206,6 @@
       "strength": 1,
       "icon": "fa-award",
       "tools": [
-        "lemlist Intent",
         "Google Alerts"
       ],
       "template": "Congrats on [award], [FirstName]! Companies at your level often need [solution] for [challenge]. Worth discussing?",
@@ -227,7 +217,7 @@
       "strength": 1,
       "icon": "fa-file-alt",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "Hi [FirstName], we just published a case study with [similar company] who achieved [results]. Thought you'd find it relevant given [context].",
       "example": "Case study with competitor → Share results → FOMO trigger"
@@ -238,7 +228,7 @@
       "strength": 1,
       "icon": "fa-globe",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], expanding to [region] brings [challenges]. Here's how [solution] helps companies scale internationally...",
       "example": "Expanding to EU → GDPR compliance tools → Regulatory requirement"
@@ -272,7 +262,6 @@
       "strength": 1,
       "icon": "fa-trophy",
       "tools": [
-        "lemlist Intent",
         "LinkedIn"
       ],
       "template": "Congrats on [milestone], [FirstName]! With [achievement], you're probably looking at [next challenge]. Here's how [solution]...",
@@ -284,7 +273,6 @@
       "strength": 1,
       "icon": "fa-newspaper",
       "tools": [
-        "lemlist Intent",
         "Google Alerts"
       ],
       "template": "Hi [FirstName], congrats on the [publication] feature! With [growth mentioned], [solution] could help by [benefit].",
@@ -296,7 +284,7 @@
       "strength": 1,
       "icon": "fa-book",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], we just helped [competitor/similar company] achieve [results]. Given your similar [context], thought you'd want to see how.",
       "example": "Competitor case study → Share with their competition → Competitive trigger"
@@ -318,7 +306,6 @@
       "strength": 2,
       "icon": "fa-microphone",
       "tools": [
-        "lemlist Intent",
         "Google Alerts"
       ],
       "template": "Hi [FirstName], I heard [Executive] mention [challenge] in their [podcast/interview]. [Solution] specifically addresses this by...",
@@ -341,7 +328,7 @@
       "strength": 1,
       "icon": "fa-building",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], expanding to [new office] means [infrastructure needs]. Here's how [solution] scales with you...",
       "example": "New office opening → Network/infrastructure tools → Expansion budget"
@@ -366,7 +353,6 @@
       "strength": 2,
       "icon": "fa-user-secret",
       "tools": [
-        "lemlist Intent",
         "LinkedIn"
       ],
       "template": "Hi [FirstName], saw you recently left [competitor]. I'd love to learn about your experience with [topic] there. Coffee chat?",
@@ -413,7 +399,6 @@
       "strength": 1,
       "icon": "fa-level-up-alt",
       "tools": [
-        "lemlist Intent",
         "LinkedIn Sales Navigator"
       ],
       "template": "Congrats on the promotion, [FirstName]! As [new role], you now oversee [scope]. Here's how [solution] helps at that scale...",
@@ -425,7 +410,6 @@
       "strength": 1,
       "icon": "fa-birthday-cake",
       "tools": [
-        "lemlist Intent",
         "LinkedIn"
       ],
       "template": "[FirstName], congrats on [milestone]! Hope you're celebrating. When you're back, would love to discuss [relevant topic].",
@@ -437,7 +421,7 @@
       "strength": 1,
       "icon": "fa-presentation",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], excited to hear your talk on [topic] at [event]. Your perspective on [point] is spot on. Let's connect there?",
       "example": "Speaking at SaaStr → Attend talk → In-person meeting setup"
@@ -448,7 +432,6 @@
       "strength": 1,
       "icon": "fa-pen",
       "tools": [
-        "lemlist Intent",
         "Google Alerts"
       ],
       "template": "[FirstName], your article on [topic] was insightful, especially [specific point]. We see similar challenges with clients using [solution]...",
@@ -493,7 +476,7 @@
       "strength": 1,
       "icon": "fa-calendar",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], saw you attended [event]. What was your biggest takeaway? We often help companies implement [related solution]...",
       "example": "Attended Dreamforce → Salesforce ecosystem tools → Buying research phase"
@@ -515,7 +498,7 @@
       "strength": 1,
       "icon": "fa-download",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "Hi [FirstName], I saw you downloaded [resource]. As you evaluate [topic], here's additional insight on [related area]...",
       "example": "Downloaded 'Sales Automation Guide' → Sales tools → Education to sales transition"
@@ -647,7 +630,8 @@
       "strength": 2,
       "icon": "fa-dollar-sign",
       "tools": [
-        "lemlist Intent"
+        "Google Analytics",
+        "Clearbit"
       ],
       "template": "[FirstName], I see there's interest in [solution]. What questions can I answer about pricing and packaging to help your decision?",
       "example": "Pricing page visited 5 times → High buying intent → Strike while hot"
@@ -724,7 +708,8 @@
       "strength": 1,
       "icon": "fa-book",
       "tools": [
-        "lemlist Intent"
+        "Google Analytics",
+        "Clearbit"
       ],
       "template": "[FirstName], saw you're deep in the docs! Any questions about implementing [feature]? Happy to connect you with our solutions team...",
       "example": "Read API docs for 2 hours → Technical buyer → Implementation phase"
@@ -735,7 +720,7 @@
       "strength": 1,
       "icon": "fa-video",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "Hi [FirstName], glad you watched our [feature] video! That's our most popular use case. Want to see it in action with your data?",
       "example": "Watched integration video → Specific need identified → Targeted demo"
@@ -757,7 +742,8 @@
       "strength": 1,
       "icon": "fa-file-alt",
       "tools": [
-        "lemlist Intent"
+        "Google Analytics",
+        "Clearbit"
       ],
       "template": "[FirstName], saw you checked out the [company] case study. They're similar to you in [aspect]. Want to hear how they achieved [result]?",
       "example": "Read competitor case study → Social proof seeking → Reference call setup"
@@ -768,7 +754,7 @@
       "strength": 2,
       "icon": "fa-calculator",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "Hi [FirstName], I see you ran the ROI calculator. Based on your inputs, [solution] could generate [specific value]. Let's refine these numbers together...",
       "example": "ROI calculation complete → Building business case → Help close internally"
@@ -779,7 +765,8 @@
       "strength": 1,
       "icon": "fa-plug",
       "tools": [
-        "lemlist Intent"
+        "Google Analytics",
+        "Clearbit"
       ],
       "template": "[FirstName], saw you're looking at integrations. We work great with [their tech stack]. Want to see the [specific integration] in action?",
       "example": "Checked Salesforce integration → Tech stack fit → Implementation planning"
@@ -790,7 +777,8 @@
       "strength": 2,
       "icon": "fa-lock",
       "tools": [
-        "lemlist Intent"
+        "Google Analytics",
+        "Clearbit"
       ],
       "template": "Hi [FirstName], I see security is important to you. We're [SOC 2/GDPR/etc] compliant. Want our full security documentation?",
       "example": "Read security page → Enterprise buyer → Compliance check phase"
@@ -869,7 +857,7 @@
       "strength": 1,
       "icon": "fa-comments",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], love your contributions in [community]! Your insight on [topic] was spot-on. We help companies with [related challenge]...",
       "example": "10+ Slack group answers → Community leader → Champion potential"
@@ -880,7 +868,7 @@
       "strength": 2,
       "icon": "fa-question",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "Hi [FirstName], saw your question in [community] about [problem]. We actually built [solution] specifically for this. Happy to show you...",
       "example": "Asked about integrations → Solution has that → Perfect product-market fit"
@@ -891,7 +879,7 @@
       "strength": 2,
       "icon": "fa-comment-dots",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], I saw you mention [pain point] in [forum]. We've helped companies solve this exact issue with [solution]...",
       "example": "Reddit post complaining about tool → Alternative solution → Frustrated buyer"
@@ -902,7 +890,7 @@
       "strength": 1,
       "icon": "fa-thumbs-up",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "Hi [FirstName], I see [feature] matters to you. [Solution] has this built-in. Want to see how it works?",
       "example": "Upvoted 'better reporting' → Product has advanced analytics → Feature-led pitch"
@@ -924,7 +912,7 @@
       "strength": 1,
       "icon": "fa-share",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], saw you shared [competitor]'s content on [topic]. We do [topic] differently by [unique approach]. Interested in comparing?",
       "example": "Shared Gong content → Sales tech interested → Competitor awareness"
@@ -935,7 +923,7 @@
       "strength": 1,
       "icon": "fa-comment-alt",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "Hi [FirstName], great comment on [blog post] about [topic]. This aligns with [solution]'s approach. Want to discuss?",
       "example": "Commented on 'Best CRMs 2024' → CRM evaluation → Active buyer"
@@ -946,8 +934,7 @@
       "strength": 2,
       "icon": "fa-star",
       "tools": [
-        "G2",
-        "lemlist Intent"
+        "G2"
       ],
       "template": "[FirstName], I read your [competitor] review. You mentioned wanting [feature they lack]. [Solution] has this built-in. Demo?",
       "example": "Reviewed competitor, wanted better UX → Product has better UX → Switching opportunity"
@@ -958,7 +945,7 @@
       "strength": 1,
       "icon": "fa-users",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], how was [competitor conference]? As you think about [topic from event], [solution] offers [complementary value]...",
       "example": "Attended Salesforce Dreamforce → Ecosystem partner → Complementary tool pitch"
@@ -980,7 +967,7 @@
       "strength": 1,
       "icon": "fa-envelope",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "Hi [FirstName], I see you follow [competitor content]. We publish similar insights on [topic]. Want our perspective?",
       "example": "Subscribed to Drift newsletter → Conversational marketing → Category interest"
@@ -1003,7 +990,7 @@
       "strength": 1,
       "icon": "fa-file-download",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "Hi [FirstName], saw you're researching [topic]. Our [competing resource] offers a different take. Want both perspectives?",
       "example": "Downloaded 'Sales Playbook' from competitor → Sales tools → Alternative option"
@@ -1014,7 +1001,7 @@
       "strength": 2,
       "icon": "fa-presentation",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], how was [competitor]'s webinar on [topic]? We approach [topic] differently by [approach]. Want to compare?",
       "example": "Attended Zoom webinar → Video conferencing evaluation → Alternative demo"
@@ -1025,7 +1012,7 @@
       "strength": 1,
       "icon": "fa-at",
       "tools": [
-        "lemlist Intent"
+        "Manual tracking"
       ],
       "template": "[FirstName], thanks for the mention in your discussion about [topic]! Happy to expand on [solution]'s approach to this...",
       "example": "Tagged in LinkedIn discussion → Relevant to their challenge → Inbound interest"
